@@ -9,11 +9,12 @@ body
   color: #333333;
   font-size: 15px;
   line-height: 2;
-  background-image: url("../images/bg-about.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
   background-attachment: fixed;
+  background-size: cover;
+  background-image: url("../images/about_bg.jpg");
 }
 
 /*以下の要素のデフォルト空白（margin-topにある）をなくす*/
@@ -109,9 +110,21 @@ header .glovalNavi li a:hover
 
 .mainWrapper .contents .mainCenter
 {
+  background-color: rgba( 20,20,20,0.2 );
+}
+
+.mainWrapper .contents .mainCenter
+{
   width: 940px;
   margin: 0 auto;
-  
+}
+
+.mainWrapper .contents .mainCenter img
+{
+  width:50%;
+  border-radius: 40px;
+  border: solid 3px black;
+  float: right;
 }
 
 .mainWrapper .contents h1
