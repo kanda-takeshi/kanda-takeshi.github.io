@@ -57,17 +57,12 @@ header .logo
 
 .headerWrapper
 {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background-size: cover;
-  background-image: url("../images/about_bg.jpg");
+  background-color: dodgerblue;
 }
 
 header .glovalNavi
 {
-  padding: 60px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -77,8 +72,7 @@ header .glovalNavi a
   list-style: none;
   font-size:20px;
   font-family: 'Bitter', serif;
-  color: black;
-  background-color: white;
+  color: floralwhite;
   padding: 5px;
 }
 
@@ -119,6 +113,13 @@ header .glovalNavi a:hover
   
 }
 
+.mainCenter .textBox
+{
+  display: inline-block;
+  width: 50%;
+  vertical-align:top;
+}
+
 .mainWrapper .contents h1
 {
   font-family: 'Bitter', serif;
@@ -128,14 +129,17 @@ header .glovalNavi a:hover
 
 .mainWrapper .profileTxt h2
 {
+  margin-top: 40px;
+  padding-left: 15px;
   font-family: 'Bitter', serif;
   font-size: 36px;
+  border-bottom: 1px solid #cccccc;
+  border-left: 6px solid #9cb4a4;
 }
 
 .mainWrapper .contents .careerWrapper
 {
-  display: inline-block;
-  width: 50%;
+  
 }
 
 .mainWrapper .contents .careerWrapper .career
@@ -152,6 +156,21 @@ header .glovalNavi a:hover
   text-align: center;
   display: inline-block;
   width: 45%;
+  float:rig
+}
+
+.mainWrapper .contents .toolsWrapper
+{
+  margin-top: 40px;
+}
+
+.mainWrapper .contents .toolsWrapper h2
+{
+  position: relative;
+  padding-left: 15px;
+  font-size: 36px;
+  border-bottom: 1px solid #cccccc;
+  border-left: 6px solid #9cb4a4;
 }
 
 /****************** e mainWrapper ********************/
@@ -163,7 +182,7 @@ footer
   margin: 0 auto;
   text-align: center;
   color: #ffffff;
-  padding: 60px 0px;
+  padding: 10px 0px;
   width:100%;
   background-color: #767671;
 }
