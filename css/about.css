@@ -6,7 +6,7 @@ body
   margin: 0 auto;
   padding: 0;
   width: 960px;
-  background-color: #cccccc;
+  background-color: lightslategray;
   color: #333333;
   font-size: 15px;
   line-height: 2;
@@ -29,6 +29,7 @@ ul
 {
   margin: 0;
   padding: 0;/*左横の・も消える*/
+  list-style: none;
 }
 
 a
@@ -48,38 +49,34 @@ a:hover/*カーソルが乗った状態だとリンクに下線が引かれる*/
 /****************** s header ********************/
 header
 {
+  background-color: lemonchiffon;
   margin:0 auto;/* 要素の中央寄せ。widthを指定したあとに記述する事 */
 }
 
-header .logo
-{
-}
-
-.headerWrapper
-{
-  background-color: dodgerblue;
-}
-
-header .glovalNavi
+nav
 {
   padding: 10px;
   text-align: center;
 }
 
-header .glovalNavi a
+nav li
+{
+  display:inline-block;
+}
+
+nav a
 {
   margin: 0 50px;
-  list-style: none;
   font-size:20px;
   font-family: 'Bitter', serif;
   color: floralwhite;
   padding: 5px;
 }
 
-header .glovalNavi a:hover
+nav a:hover
 {
-  color: white;
-  background-color: black;
+  color: orange;
+  border-bottom: 2px solid orange;
   text-decoration: none;/* 全体で指定している下線の取り消し */
 }
 
@@ -87,47 +84,30 @@ header .glovalNavi a:hover
 /****************** e header ********************/
 
 
-/****************** s mainWrapper ********************/
-.mainWrapper
+/****************** s main ********************/
+main
 {
   clear:both;/*上で指定したfloatの解除*/
   background-color:#ffffff;
   padding: 35px 0;
   margin: 0 auto;
   width: 100%;
-  margin: 0 auto;
 }
 
-.mainWrapper .contents
+article
 {
   padding-left: 10px;
 }
 
-.mainWrapper .contents .mainCenter p
+article p
 {
   padding-left: 10px;
-}
-
-.mainWrapper .contents .mainCenter img
-{
-  
-}
-
-.mainCenter .textBox
-{
   display: inline-block;
   width: 50%;
   vertical-align:top;
 }
 
-.mainWrapper .contents h1
-{
-  font-family: 'Bitter', serif;
-  font-size: 36px;
-  border-bottom: 1px solid #cccccc;
-}
-
-.mainWrapper .profileTxt h2
+h1,h2
 {
   margin-top: 40px;
   padding-left: 15px;
@@ -137,43 +117,14 @@ header .glovalNavi a:hover
   border-left: 6px solid #9cb4a4;
 }
 
-.mainWrapper .contents .careerWrapper
+main img
 {
-  
+  width: 40%;
+  margin-left: 20px;
+  vertical-align: top;
 }
 
-.mainWrapper .contents .careerWrapper .career
-{
-
-}
-
-.mainWrapper .contents .imgWrapper img
-{
-  width: 90%;
-}
-.mainWrapper .contents .imgWrapper
-{
-  text-align: center;
-  display: inline-block;
-  width: 45%;
-  float:rig
-}
-
-.mainWrapper .contents .toolsWrapper
-{
-  margin-top: 40px;
-}
-
-.mainWrapper .contents .toolsWrapper h2
-{
-  position: relative;
-  padding-left: 15px;
-  font-size: 36px;
-  border-bottom: 1px solid #cccccc;
-  border-left: 6px solid #9cb4a4;
-}
-
-/****************** e mainWrapper ********************/
+/****************** e main ********************/
 
 
 /****************** s footer ********************/
