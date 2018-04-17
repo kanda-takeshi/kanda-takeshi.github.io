@@ -34,7 +34,6 @@ ul
 
 a
 {
-  color: #3583aa;
   text-decoration: none;
 }
 a:visited/*一度訪問したリンクの色を薄くする*/
@@ -69,7 +68,7 @@ nav a
   margin: 0 50px;
   font-size:20px;
   font-family: 'Bitter', serif;
-  color: floralwhite;
+  color: black;
   padding: 5px;
 }
 
