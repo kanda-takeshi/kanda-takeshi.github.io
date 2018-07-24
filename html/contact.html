@@ -1,11 +1,91 @@
-<!DOCTYPE html>
-
+<!DOCTYPE html> <!-- 必ず1行目に記述。HTMLのバージョン宣言。HTML5以降のバージョンを表す。 -->
 <html>
+<head>
+<meta charset="utf-8">
+<title>色々なWebデザインの検証サイト</title>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<link href="../css/contact.css" rel="stylesheet">
+</head>
+  
+  <body>
     
-    <head>
-    </head>
+<!--    header Start-->
+    <header>
+      <a href="../top.html"><img class="logo" src="../images/logo.png" alt="logo.png"></a>
+      
+      <!--      ナビゲーション要素。主要なサイト内ナビゲーションをマークアップする時に使用-->
+      <nav class="main_nav">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+<!--    header End-->
     
-    <body>
-    </body>
+<!--    main Start-->
+    <main role="main">　<!-- メインコンテンツを包む要素 -->
+      
+      <section class="main_content">
+        
+        <h1>Contact</h1>
+        <p>お仕事のご依頼等、お問い合わせはこちらからお願い致します。</p>
+        
+        <section class="contact_form">
+          
+          <h1>Contact Form</h1>
+          
+          <form>
+            <dl>
+              <dt class="required">お名前</dt>
+              <dd><input type="text" name="name" class="name" required></dd>
+              <dt class="required">メールアドレス</dt>
+              <dd><input type="text" name="email" class="email" required></dd>
+              <dt>お電話番号</dt>
+              <dd><input type="tel" name="tel" class="tel"></dd>
+              <dt>お問い合わせ種別</dt>
+              <dd>
+                <select name="type" class="type">
+                  <option value="ランディングページ作成">ランディングページ（LP）の作成ご依頼</option>
+                  <option value="ECサイト作成">ECサイトの作成ご依頼</option>
+                  <option value="その他の依頼">その他のご依頼</option>
+                </select>
+              </dd>
+              <dt>ご希望のご連絡方法</dt>
+              <dd>
+                <input type="radio" value="Eメール希望" name="contact" required>Eメール
+                <input type="radio" value="お電話希望" name="contact" required>お電話
+              </dd>
+              <dt>メッセージ</dt>
+              <dd><textarea name="message" class="message"></textarea></dd>
+            </dl>
+            
+            <button type ="submit" class="sub-btn">送信</button>
+            
+            <section class="attention">
+              <h1>ご注意</h1>
+              <p>「<span>*</span>」のついている箇所は必須項目です。<br>この問い合わせフォームにはプログラムが設置されていない為、動作しません。<br>プログラム実装まで、しばらくお待ち下さい。</p>
+            </section>
+            
+          </form>
+          
+        </section>
+        
+      </section>
+      
+    </main>
+<!--    main End-->
     
+<!--    footer Start-->
+    <footer>
+      <!--      small要素。重要度が低くて控えめにしたい箇所を囲む-->
+      <small>(C)Kanda-Takeshi.</small>
+    </footer>
+<!--    footer End-->
+    
+  </body>
+  
 </html>

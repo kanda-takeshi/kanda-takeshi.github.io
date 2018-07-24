@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import "variables";
+@import "mixin";
+
+body
+{
+  @include background-image-init( "../images/04.jpg" );
+}
+
+.main_content
+{
+  width: $widh-size;
+  padding-left: 20px;
+  margin: 0 auto;
+  color: #ffffff;
+  h1 ,p {
+    margin: 20px 0;
+  }
+}
+
+.contact_form
+{
+  background-color: #eaeaea;
+  color: black;
+  padding: 20px 20px;
+  width: 90%;
+  h1{
+    padding-left: 20px;
+    border-left: solid 5px red;
+  }
+  
+  dt{
+    width: 200px;
+    padding: 10px 0;
+    float: left;
+    clear: both;
+  }
+  
+  dd{
+    padding: 10px 0;
+  }
+  
+  .name{
+    width: 200px;
+  }
+  
+  .email
+  {
+    width: 200px;
+    height: 50px;
+  }
+  
+  .tel{
+    width: 200px;
+  }
+  
+  .message{
+    width: 600px;
+    height: 150px;
+  }
+  
+  .sub-btn{
+    width: 200px;
+    height: 100px;
+    font-size: 35px;
+    margin-left: 200px;
+    background-color: #009cd3;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+  .sub-btn:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #009cd3;
+    border: solid 3px #009cd3;
+  }
+  
+  .attention{
+    span{
+      color: #ff0000;
+    }
+    margin-left: 200px;
+  }
+  .required:after
+  {
+    content: "*";
+    color: #ff0000;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+

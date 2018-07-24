@@ -1,0 +1,8 @@
+@mixin background-image-init( $url )
+{
+  background-image: url( $url );
+  background-repeat: no-repeat; // 繰り返しなし
+  background-position: center center;// 背景画像の表示位置（横　、　縦）
+  background-attachment: fixed; // 背景画像の位置を固定
+  background-size: cover; // 画像比率を保ったまま、画面全体に拡大縮小
+}

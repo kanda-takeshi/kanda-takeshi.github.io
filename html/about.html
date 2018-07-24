@@ -1,77 +1,87 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- 必ず1行目に記述。HTMLのバージョン宣言。HTML5以降のバージョンを表す。 -->
 <html>
 <head>
-<meta charset = "utf-8">
-<title>【About｜自己紹介】</title>
+<meta charset="utf-8">
+<title>自己紹介</title>
 <link href="https://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet">
-<link href = "../css/about.css" rel = "stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<link href="../css/about.css" rel="stylesheet">
 </head>
-<body>
-
-<!------------------------------------------------------  s header  -------------------------------------------------------------------->
-  <header>
-   
-<!-------------  s glovalNavi  ------------->
-      <nav>
+  
+  <body>
+    
+<!--    header Start-->
+    <header>
+      <a href="../top.html"><img class="logo" src="../images/logo.png" alt="logo.png"></a>
+      
+      <!--      ナビゲーション要素。主要なサイト内ナビゲーションをマークアップする時に使用-->
+      <nav class="main_nav">
         <ul>
-          <li><a href = "../index.html">top</a></li>
-          <li><a href = "about.html">About</a></li>
-          <li><a href = "contact.html">Contact</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-<!-------------  e glovalNavi  ------------->
- 
-  </header>
-<!------------------------------------------------------  e header  -------------------------------------------------------------------->
+      
+    </header>
+<!--    header End-->
+    
+<!--    main Start-->
+    <main role="main">　<!-- メインコンテンツを包む要素 -->
+      
+      <section class="main_content">
+        
+        <section class="about">
+          <h1>自己紹介</h1>
 
-  
-<!-------------  s main  ------------->
-  <main role = "main">
+          <p>このページでは、私の簡単な自己紹介をしていきたいと思います。</p>
+          
+        </section>
+        
+        <section class="profile">
+          <h2>Profile</h2>
 
-    <article>
-
-      <section>
-        <h1>About</h1>
-        <p>このWebサイト制作者の
-        プロフィールや自己紹介ページです。</p>
-      </section>
-
-      <section>
-        <h2>Profile</h2>
-        <p>最近、山へ登るようになりました。登ってる最中は疲れますが <br>
-        やっぱり楽しいです。六甲山ばっかり登ってます。※たまに遠出。<br>
-        しかし、気をつけないと行けないのはイノシシ。山には危険がたくさんです。
-        恐ろしい事に、野生イノシシ（ウリボー？）に襲われた<br>経験があります。
-        この事件のせいで少し山が怖くなってしまいましたが、今後も
-        ガンガン登っていく予定です。このWebサイトでは、私が登った山々を紹介していくので、どうぞ楽しんでいって下さい。<br>※今後登ってみたい山も含みます。
-        </p>
-
-        <img src = "../images/damage.jpg" alt = "プロフィール画像" class = "profileImg">
-      </section>
-
-      <section>
-        <h2>登山道具</h2>
-
-        <p>アウトレットで買った相棒のリュックサック。<br>
-        色合いがとても気に入っています。
-        六甲山への登山３回目の時に<br>ウリボーに襲われてから
-        チャックが閉まりにくくなってた。<br>
-        このリュックを見ていると、あのときのトラウマが呼び覚まされますが、山がどれだけ危険かを忘れないよう、ツギハギをしてでも<br>長く使っていこうと思っています。</p>
-       
-        <img src = "../images/ryukku.jpg" alt = "プロフィール画像" class = "profileImg">
+          <p>フリーランスのWebクリエイターとして活躍するべく頑張っています。フリーにおいての制作実績はLP１本だけですが、今後まだまだ作成していきます。</p>
+        </section>
+        
+        <img class="profile_img" src="../images/free.jpg" alt="free.jpg">
+        
       </section>
       
-    </article>
-
-  </main>
-<!-------------  e main  ------------->
+      
+      
+      <section class="career"> <!--  経歴  -->
+        <h1>経歴など</h1>
+        <table>
+          <tr>
+            <th>2018年02月01日</th>
+            <td>HTML/CSSの勉強開始</td>
+          </tr>
+          <tr>
+            <th>2018年03月29日</th>
+            <td>クラウドワークス登録</td>
+          </tr>
+          <tr>
+            <th>2018年04月13日</th>
+            <td>はじめての案件を受注</td>
+          </tr>
+          <tr>
+            <th>2018年06月30日</th>
+            <td>退職</td>
+          </tr>
+        </table>
+      </section>
+      
+    </main>
+<!--    main End-->
+    
+<!--    footer Start-->
+    <footer>
+      <!--      small要素。重要度が低くて控えめにしたい箇所を囲む-->
+      <small>(C)Kanda-Takeshi.</small>
+    </footer>
+<!--    footer End-->
+    
+  </body>
   
-  
-  
-<!-------------  s footer  ------------->
-  <footer>
-    <small>(C)2018 KandaTakeshi.</small>
-  </footer>
-<!-------------  e footer  ------------->
-</body>
 </html>

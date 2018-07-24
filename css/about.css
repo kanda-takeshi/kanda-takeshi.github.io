@@ -1,149 +1,59 @@
-@charset "utf-8";
+body {
+  background-image: url("../images/01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
-/*初期の空白をなくす*/
-body
-{
+main {
+  width: 90%;
   margin: 0 auto;
-  padding: 0;
-  width: 960px;
-  background-color: lightslategray;
-  color: #333333;
-  font-size: 15px;
-  line-height: 2;
 }
 
-/*以下の要素のデフォルト空白（margin-topにある）をなくす*/
-p,h1,h2,h3,h4,h5,h6
-{
-  margin-top: 0px;
-}
-
-/*画像の縦位置調整（下側に意図しない余白ができるので）*/
-img
-{
-  vertical-align: bottom;
-}
-
-/*余分な余白を解除*/
-ul
-{
-  margin: 0;
-  padding: 0;/*左横の・も消える*/
-  list-style: none;
-}
-
-a
-{
-  text-decoration: none;
-}
-a:visited/*一度訪問したリンクの色を薄くする*/
-{
-  color: #788d98;
-}
-a:hover/*カーソルが乗った状態だとリンクに下線が引かれる*/
-{
-  text-decoration: underline;
-}
-
-/****************** s header ********************/
-header
-{
-  background-color: lemonchiffon;
-  margin:0 auto;/* 要素の中央寄せ。widthを指定したあとに記述する事 */
-}
-
-nav
-{
-  padding: 10px;
-  text-align: center;
-}
-
-nav li
-{
-  display:inline-block;
-}
-
-nav a
-{
-  margin: 0 50px;
-  font-size:20px;
-  font-family: 'Bitter', serif;
-  color: black;
-  padding: 5px;
-}
-
-nav a:hover
-{
-  color: orange;
-  border-bottom: 2px solid orange;
-  text-decoration: none;/* 全体で指定している下線の取り消し */
-}
-
-
-/****************** e header ********************/
-
-
-/****************** s main ********************/
-main
-{
-  clear:both;/*上で指定したfloatの解除*/
-  background-color:#ffffff;
-  padding: 35px 0;
-  margin: 0 auto;
-  width: 100%;
-}
-
-article
-{
-  padding-left: 10px;
-}
-
-article p
-{
-  padding-left: 10px;
-  display: inline-block;
-  width: 50%;
-  vertical-align:top;
-}
-
-h1,h2
-{
-  margin-top: 40px;
-  padding-left: 15px;
-  font-family: 'Bitter', serif;
-  font-size: 36px;
-  border-bottom: 1px solid #cccccc;
-  border-left: 6px solid #9cb4a4;
-}
-
-main img
-{
-  width: 40%;
-  margin-left: 20px;
-  vertical-align: top;
-}
-
-/****************** e main ********************/
-
-
-/****************** s footer ********************/
-footer
-{
-  margin: 0 auto;
-  text-align: center;
+.main_content h1 {
   color: #ffffff;
-  padding: 10px 0px;
-  width:100%;
-  background-color: #767671;
+  font-size: 40px;
+  border-bottom: solid 2px #cccccc;
+}
+.main_content h2 {
+  color: #ffffff;
+  margin: 20px 0;
+  border-left: solid 5px #cccccc;
+  padding-left: 10px;
+}
+.main_content p {
+  margin: 20px 0;
+  color: #ffffff;
 }
 
-footer small
-{
-  font-size: 12px;
+.profile_img {
+  float: right;
+  margin-right: 15%;
 }
 
-/****************** e footer ********************/
+.profile {
+  width: 50%;
+  float: left;
+}
 
-
-
-
+.career {
+  clear: both;
+  color: #ffffff;
+}
+.career table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.career th {
+  width: 300px;
+  color: #000000;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  border: solid 2px black;
+}
+.career td {
+  width: 500px;
+  padding: 0 0 0 40px;
+  border: solid 2px black;
+}

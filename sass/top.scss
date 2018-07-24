@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+@import "variables";
+@import "mixin";
+
+body
+{
+  @include background-image-init( "../images/03.jpg" );
+}
+
+.main_content
+{
+  text-align: center;
+  width: $widh-size;
+  margin: 0 auto;
+  h1{
+    font-size: 80px;
+    color: #ffffff;
+  }
+  p{
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .btn{
+    margin: 50px 0;
+    font-family: 'Bitter', serif;
+    a{
+      color: black;
+      background-color: #E0D8D1;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    a:hover{
+      border: solid 2px #E0D8D1;
+      background-color: #CFC83A;
+    }
+  }
+  
+}

@@ -1,0 +1,95 @@
+@charset "utf-8"; // cssの１行目は文字コードの指定を記述する
+
+@import "variables";
+
+// 共通の初期設定
+body
+{
+  margin: 0;
+  padding: 0;
+  background-color: #654321;
+  font-size: $font-size;
+  line-height: 2;
+}
+
+p,h1,h2,h3,h4,h5,h6
+{
+  margin: 0;
+}
+
+img
+{
+  vertical-align: bottom;
+}
+
+ul
+{
+  margin: 0;
+  padding: 0;
+}
+
+a
+{
+  color: $a-color;
+  text-decoration: none;
+}
+
+// 共通の設定 End
+
+
+header
+{
+  width: $widh-size;
+  height: 300px;
+  margin: 0 auto;
+  img{
+    margin: 50px 0 0 50px;
+    line-height: 150px;
+  }
+}
+
+.logo
+{
+  float: left;
+}
+
+.main_nav
+{
+  float: right;
+  margin-top: 50px;
+  
+  li{
+    float: left;
+    margin: 0 20px;
+    list-style: none;
+    font-family: 'Bitter', serif;
+  }
+  a{
+    color: #ffffff;
+    padding-bottom: 3px;
+    font-size: $a-font-size;
+  }
+  a:hover{
+    border-bottom: solid 3px #ffffff;
+  }
+}
+
+main
+{
+  clear: both;
+}
+
+.main_content
+{
+  widows: $widh-size;
+}
+
+footer
+{
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+

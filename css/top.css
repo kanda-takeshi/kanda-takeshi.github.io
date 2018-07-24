@@ -1,0 +1,35 @@
+body {
+  background-image: url("../images/03.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main_content {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.main_content h1 {
+  font-size: 80px;
+  color: #ffffff;
+}
+.main_content p {
+  color: #ffffff;
+  font-size: 20px;
+}
+.main_content .btn {
+  margin: 50px 0;
+  font-family: 'Bitter', serif;
+}
+.main_content .btn a {
+  color: black;
+  background-color: #E0D8D1;
+  padding: 30px;
+  border-radius: 10px;
+}
+.main_content .btn a:hover {
+  border: solid 2px #E0D8D1;
+  background-color: #CFC83A;
+}
