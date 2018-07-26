@@ -6,6 +6,12 @@ body {
   background-size: cover;
 }
 
+.self-alert a:hover {
+  color: purple;
+  border-bottom: solid 2px red;
+  margin-bottom: 3px;
+}
+
 .main_content {
   text-align: center;
   width: 90%;
