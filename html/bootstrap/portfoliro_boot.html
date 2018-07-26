@@ -18,6 +18,30 @@
   <body>
     
     <header>
+      
+      <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light">
+          <a href="#" class="navbar-brand">Logo</a>
+          
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+            </ul>
+          </div>
+          
+          
+        </nav>
+      </div>
+      
+      
+      
+      
       <section class="main-bg text-white text-center py-5">
         <h1 class="display-4 mb-4">Original App</h1>
         <a href="#" class="btn btn-primary btn-lg">Get It now!!!!</a>
@@ -86,23 +110,26 @@
           
           <div class="tab-content py-4">
             <div id="ios" class="tab-pane active">
-              <p>hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.</p>
+              <p>hellow <span class="font-weight-bold text-info"  data-toggle="tooltip" title="This is awesome">ios.hellow</span> ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.hellow ios.</p>
             </div>
 
             <div id="android" class="tab-pane">
               <p>hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.hellow android.</p>
             </div>
           </div>
-          
-          
-          
+
         </div>
         
       </section>
       
+      <section class="bg-light text-center py-5">
+        <a href="#" class="btn btn-primary btn-lg">Get it now !!!!!</a>
+      </section>
+      
     </main>
     
-    <footer>
+    <footer class="text-center text-muted py-4">
+      Copyright Kanda Takeshi
     </footer>
     
 
@@ -111,5 +138,23 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    
+    
+    <script>
+      $(function(){
+        
+        'use strict';
+        $('[data-toggle="tooltip"]').tooltip();
+        
+      });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
   </body>
 </html>
