@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.main_nav
+{
+  ul{
+    text-align: center;
+  }
+  li{
+    display: inline; // 一列にならぶよ
+    list-style: none; // 左横の・をなくす
+    padding: 0 1% 0 1%;
+  }
+  
+  .storeInfomation{
+    width: 200px;
+    margin: 15px auto;
+    
+    li{
+      padding:0 10% 0 10%;
+    }
+    
+    .slide_down_list{
+      display: none;  // 初期は非表示
+      a{
+        padding-bottom: 2px;
+      }
+      li{
+        border: none;
+        display: block;
+        text-align: left;
+        padding-left: 32%;
+      }
+    }
+    
+  }
+  a{
+    padding-bottom: 5px; // hoverした時の下線を少し下にするよ
+  }
+  a:hover{
+    color: red;
+    text-decoration: none;
+    border-bottom: solid 2px red;
+  }
+}
+
+body
+{
+  font-family: 'メイリオ', Meiryo,'Meiryo UI','ヒラギノ明朝 ProN','Hiragino Mincho ProN','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
+}
+
+.main_visual
+{
+  h1{
+    border: solid 2px black;
+    
+  }
+}
