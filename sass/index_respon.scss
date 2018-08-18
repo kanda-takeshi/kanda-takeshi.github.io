@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+// スマホ表示
+@media screen and (max-width:400px)
+{
+  .br_pc{ display: none;}
+  .br_sp{ display: block;}
+  .disp_pc{ display: none;}
+  .disp_sp{ display: block;}
+  
+  article p{
+    font-size: 20px;
+  }
+  article img.width_250{
+    width: 250px;
+  }
+  article img.width_90pa{
+    width: 90%;
+  }
+  .absolute{
+    font-size: 50px;
+  }
+}
+
+// PC表示
+@media screen and (min-width:400px)
+{
+  .br_pc{ display: block;}
+  .br_sp{ display: none;}
+  
+  .disp_pc{ display: block;}
+  .disp_sp{ display: none;}
+  
+  article img.width_90pa{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

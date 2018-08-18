@@ -1,0 +1,92 @@
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.none_padding .col-xs-4 {
+  padding: 0;
+}
+
+.panel-body.none_padding {
+  padding: 0;
+}
+
+header img {
+  max-width: 960px;
+}
+
+main.panel.panel-default.panel_center {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+article section.tab-pane {
+  max-width: 960px;
+}
+
+.px_20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.nav-tabs.back_green > li.active > a,
+.nav-tabs.back_green > li.active > a:hover,
+.nav-tabs.back_green > li.active > a:focus {
+  color: white;
+  cursor: default;
+  background-color: #8DE97A;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+.panel.none_margin {
+  margin: 0;
+}
+
+.font_size_20 {
+  font-size: 20px;
+}
+
+.my_30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.relatibe {
+  position: relative;
+}
+
+.absolute {
+  font-size: 100px;
+  position: absolute;
+  width: 100%;
+  padding-top: 50px;
+  color: white;
+  z-index: 1;
+}
+
+.width_200 {
+  width: 200px;
+}
+
+header h1 {
+  top: 0px;
+  left: 0px;
+}
+
+footer {
+  max-width: 960px;
+}
