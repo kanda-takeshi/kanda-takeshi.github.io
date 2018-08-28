@@ -25,11 +25,6 @@ article section.tab-pane{
   max-width: $max_width;
 }
 
-.px_20{
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 // タブナビゲーションの設定
 .nav-tabs.back_green > li.active > a,
 .nav-tabs.back_green > li.active > a:hover,
@@ -49,21 +44,11 @@ article section.tab-pane{
   font-size: 20px;
 }
 
-.my_30{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.mb_30{
-  margin-bottom: 30px;
-}
-
-.relatibe{
+.relative{
   position: relative;
 }
 .absolute{
   font-size: 100px;
-  
   position: absolute;
   width: 100%;
   padding-top: 50px;

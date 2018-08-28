@@ -1,0 +1,669 @@
+/*-------  ここから共通のCSS  --------*/
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family:'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+/*-------  ここまで共通のCSS  --------*/
+header
+{
+  width:100%;
+  height:50px;
+  line-height:50px;
+  border-bottom:solid 1px #eee;
+  background-color:white;
+  position:absolute;
+}
+
+header .content
+{
+  width:1170px;
+  margin:0 auto;
+  font-weight:bold;
+}
+
+header .logo
+{
+  float:left;
+  font-size:18px;
+  color:#777;
+}
+
+header .navi
+{
+  float:right;
+}
+header .navi li
+{
+  float:left;
+  padding-left:20px;
+}
+header .navi li a
+{
+  color:#323a45;
+}
+header .navi li a:hover
+{
+  color:#0dc0c0;
+}
+
+.topContentOverRay
+{
+  width:100%;
+  top:50px;
+  position:absolute;
+  z-index:-2;
+  background-color:rgba(0,0,0,0.6);
+  height:525px;
+}
+.toopContentImgWrapper
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/top.jpg");
+  height:575px;
+  width:100%;
+  top:0px;
+  background-size:cover;
+  position:absolute;
+  z-index:-3;
+}
+.topContentWrapper
+{
+  width:100%;
+  height:575px;
+  z-index:-1;
+}
+.topContentWrapper .content .logo
+{
+  text-align:center;
+}
+.topContentWrapper .content .logo h1
+{
+  font-size:48px;
+  padding-bottom:30px;
+  padding-top:220px;
+  color:white;
+  font-weight:normal;
+}
+.topContentWrapper .content .logo p
+{
+  font-size:18px;
+  padding-bottom:40px;
+  color:rgba(255,255,255,0.8);
+}
+.topContentWrapper .content .logo a
+{
+  padding: 10px 20px 10px 20px;
+  border:solid 1px rgba(250,250,250,0.15);
+  color:white;
+  font-size:20px;
+  background-color:rgba(250,250,250,0.06);
+}
+
+.mainContentWrapper
+{
+  width:1170px;
+  height:500px;
+  margin:0 auto;
+}
+.mainContentWrapper .content
+{
+  width:60%;
+  padding-top:80px;
+  margin:0 auto;
+}
+.mainContentWrapper .content .navi
+{
+  text-align:center;
+  padding-bottom:10px;
+  font-size:32px;
+  color:#555;
+}
+.mainContentWrapper .content .lesson
+{
+  padding-top:40px;
+  width:50%;
+  float:left;
+  text-align:center;
+}
+.mainContentWrapper .content .lesson img
+{
+  padding-bottom:20px;
+}
+.mainContentWrapper .content .lesson h1
+{
+  padding-bottom:10px;
+  font-weight:normal;
+  color:#555;
+  font-size:18px;
+}
+.mainContentWrapper .content .lesson p
+{
+  color:#888;
+  font-size:15px;
+}
+.mainContentWrapper .content .bottom
+{
+  padding-bottom:80px;
+}
+
+.mainContent_second
+{
+  position: relative;
+  clear:both;
+}
+.mainContent_second .overRay_gray
+{
+  background-color:#f4f4f4;
+  height:376px;
+}
+.mainContent_second .overRay_gray p
+{
+  padding-top:80px;
+  text-align:center;
+  font-size:40px;
+}
+.mainContent_second img.tv
+{
+  top:150px;
+  position:absolute;
+  display: block;
+  left:0;
+  right:0;
+  margin: auto;
+}
+.mainContent_second .textContentsWrapper
+{
+  width:1170px;
+  margin:0 auto;
+}
+.mainContent_second .textContentsWrapper .textContents
+{
+  padding-top:130px;
+  width:90%;
+  margin:0 auto;
+}
+.mainContent_second .textContentsWrapper .textContents h1
+{
+  color:#555;
+  font-size:18px;
+}
+.mainContent_second .textContentsWrapper .textContents p
+{
+  font-size:14px;
+  color:#888;
+}
+.mainContent_second .textContentsWrapper .textContents .content
+{
+  width:45%;
+}
+.mainContent_second .textContentsWrapper .textContents .top
+{
+  padding-bottom:70px;
+}
+.mainContent_second .textContentsWrapper .textContents .bottom
+{
+  padding-bottom:70px;
+}
+.mainContent_second .textContentsWrapper .textContents .left
+{
+  float:left;
+}
+
+.mainContent_second .textContentsWrapper .textContents .right
+{
+  float:right;
+}
+
+.mainContentTherd
+{
+  //clear:both;
+  //width:100%;
+  background-color:#f4f4f4;
+}
+.mainContentTherd .navi
+{
+  padding-top:80px;
+  padding-bottom:30px;
+  text-align:center;
+  font-size:35px;
+}
+
+.mainContentTherd .menus .menuWrapper
+{
+  width: 300px;
+  display:inline-block;
+  margin-bottom:100px;
+  box-shadow:1px 2px rgba(0,0,0,0.2);
+}
+.mainContentTherd .menus .left
+{
+  
+}
+.mainContentTherd .menus .center
+{
+  //margin-left:35px;
+}
+
+.mainContentTherd .menus .right
+{
+  //float:right;
+}
+.mainContentTherd .menus .menuWrapper
+{
+  //width:31%;
+}
+.mainContentTherd .menus .menuWrapper .menu
+{
+  padding:15px 15px 0px 15px;
+  background-color:white;
+  text-align:center;
+  
+}
+.mainContentTherd .menus .menuWrapper .menu .course
+{
+  padding:30px 10px;
+  font-size:24px;
+  
+  color:white;
+}
+.mainContentTherd .menus .left .menu .course
+{
+  background-color:#323a45;
+}
+.mainContentTherd .menus .center .menu .course
+{
+  background-color:#0dc0c0;
+}
+.mainContentTherd .menus .right .menu .course
+{
+  background-color:#323a45;
+}
+.mainContentTherd .menus .menuWrapper .menu .value
+{
+  padding:30px 10px;
+  font-size:28px;
+  background-color:#f0f0f0;
+}
+.mainContentTherd .menus .menuWrapper .menu .menuNavi p
+{
+  padding:45px 0px 25px;
+  margin:0 30px;
+  font-size:16px;
+  color:gray;
+  border-bottom:solid 1px gray;
+}
+
+.mainContentTherd .menus .menuWrapper .menu .menuNavi .middle
+{
+  padding:25px 0px;
+}
+.mainContentTherd .menus .menuWrapper .menu .menuNavi .bottom
+{
+  padding:25px 0px;
+}
+
+.mainContentTherd .menus .menuWrapper .menu .appButton a
+{
+  display:inline-block;
+  color:white;
+  margin: 40px 0px;
+  padding:10px 20px;
+  font-size:18px;
+  background-color:#323a45;
+  
+}
+.mainContentTherd .menus .menuWrapper .menu .appButton a:hover
+{
+  color:white;
+}
+
+
+
+
+.mainContentForce
+{
+  text-align:center;
+  padding-top:80px;
+}
+
+.mainContentForce .anser
+{
+  color:#555;
+  font-size:30px;
+}
+
+.radius
+{
+  border-radius:75px;
+  height:150px;
+  width:150px;
+}
+
+.mainContentForce .students
+{
+  padding-top:50px;
+  padding-bottom:20px;
+}
+.mainContentForce .students .student p
+{
+  font-size:15px;
+  color:#888;
+  padding-top:20px;
+  padding-bottom:50px;
+}
+
+
+.facebookMessageWrapper
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/night_view.jpg");
+  background-size:cover;
+}
+.facebookMessageWrapper p
+{
+  background-color:rgba(0,0,0,0.6);
+  color:white;
+  text-align:center;
+  padding:150px 0;
+  font-size:23px;
+}
+
+
+.columnWrapper
+{
+  background-color:#f4f4f4;
+  width:100%;
+}
+.columnWrapper .content
+{
+  width:1170px;
+  margin:0 auto;
+}
+
+.columnWrapper .title
+{
+  color:#555;
+  text-align:center;
+  padding-top:80px;
+  padding-bottom:20px;
+}
+
+.columnWrapper .content .menu
+{
+  width:100%;
+  text-align:center;
+  padding-bottom:40px;
+}
+.columnWrapper .content .menu .btn
+{
+  display:inline-block;
+  margin-left:5px;
+  padding:8px 10px;
+  background-color:white;
+}
+.columnWrapper .content .menu .btn:hover
+{
+  background-color:#009ca8;
+  color:white;
+}
+.columnWrapper .content .menu .left
+{
+  background-color:#009ca8;
+  color:white;
+}
+
+.columnWrapper .imagesWrapper
+{
+  
+}
+
+.columnWrapper .images
+{
+  text-align:center;
+}
+.columnWrapper .images .left
+{
+  width:500px;
+  background-color:white;
+  display:inline-block; 
+  
+}
+.columnWrapper .images .right
+{
+  width:500px;
+  background-color:white;
+  display:inline-block; 
+  
+}
+
+.columnWrapper .images .top
+{
+  padding-bottom:30px;
+}
+
+.columnWrapper .images .midle
+{
+  padding-bottom:20px;
+}
+
+.columnWrapper .images .image
+{
+  background-clip:content-box;
+  background-size:cover;
+  height:238px;
+  margin:7px;
+}
+
+.columnWrapper .images .imageWrapper .topLeft
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/portfolio/programmer.jpg");
+}
+.columnWrapper .images .imageWrapper .topRight
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/portfolio/html5.jpg");
+}
+.columnWrapper .images .imageWrapper .midleLeft
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/portfolio/js.jpg");
+}
+.columnWrapper .images .imageWrapper .midleRight
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/portfolio/books.jpg");
+}
+.columnWrapper .images .imageWrapper .bottomLeft
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/portfolio/engineer.jpg");
+}
+.columnWrapper .images .imageWrapper .bottomRight
+{
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/portfolio/inspect.jpg");
+}
+
+.imageWrapper h1
+{
+  font-size:17px;
+  text-align:center;
+  padding-top:17px;
+  color:#323a45;
+}
+
+.imageWrapper p
+{
+  padding-bottom:27px;
+  text-align:center;
+}
+
+.imageWrapper
+{
+  box-shadow:1px 1px #000000;
+}
+
+.columnWrapper .loadButton
+{
+  display:inline-block;
+  padding:10px 20px;
+  margin:50px 0;
+  background-color:#323a45;
+  color:white;
+}
+
+.formWrapper
+{
+  width:100%;
+  background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/contact.jpg");
+  
+  //background-size:cover;
+}
+
+.formWrapper .buraind
+{
+  background-color:rgba(0,0,0,0.7);
+}
+
+.formWrapper .content
+{
+  width:1170px;
+  margin:0 auto;
+}
+
+.formWrapper .firstTitle
+{
+  text-align:center;
+  padding-top:80px;
+  padding-bottom:20px;
+  color:white;
+  font-size:35px;
+}
+
+.formWrapper .messageTitle
+{
+  color:white;
+  margin-bottom:20px;
+  font-size:22px;
+  
+}
+
+.formWrapper .leftWrapper
+{
+  width:70%;
+  display:block;
+}
+.formWrapper .leftWrapper .left
+{
+  //width:85%;
+}
+
+.formWrapper .messageBox
+{
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  padding:15px;
+  margin-bottom:20px;
+  background-color:rgba(250,250,250,0.2);
+}
+
+
+.formWrapper .leftWrapper .message
+{
+  padding-bottom:120px;
+}
+
+.formWrapper .submit
+{
+  display:inline-block;
+  color:white;
+  padding:15px 35px;
+  margin-top:10px;
+  margin-bottom:80px;
+  background-color:#0dc0c0;
+}
+
+.formWrapper .content .right
+{
+  color:white;
+  display:block;
+}
+
+.formWrapper .right .title
+{
+  font-size:22px;
+  margin-bottom:20px;
+  color: white;
+}
+
+.formWrapper .right .message
+{
+  width: 80%;
+  font-size:14px;
+  margin-bottom:24px;
+  color: white;
+}
+
+.formWrapper .right .addressTitle
+{
+  margin-bottom:20px;
+  font-size:20px;
+  color: white;
+}
+.formWrapper .right .address
+{
+  margin-bottom:24px;
+  color: white;
+}
+
+.formWrapper .right .terePhone
+{
+  padding-bottom:100px;
+  color: white;
+}
+
+
+footer
+{
+  width:100%;
+  text-align:center;
+}
+
+footer .content
+{
+  width:1170px;
+  padding-top:80px;
+  margin:0 auto;
+}
+
+footer h1
+{
+  color:#555;
+  font-weight:normal;
+}
+
+footer .icon
+{
+  margin-left:10px;
+  margin-bottom:70px;
+  font-size:36px;
+  color:#323a45;
+}
+
+footer .lastFooter
+{
+  background-color:#222;
+  color:#555;
+  padding:40px 0px;
+}

@@ -7,8 +7,26 @@ p,h1,h2,h3,h4,h5,h6{
 img{
   vertical-align: bottom;
 }
+.border{
+  border: 1px solid black;
+}
 
 ul{
   margin: 0;
   padding: 0;
+}
+
+.my_30{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.mt_30{
+  margin-top: 30px;
+}
+.mb_30{
+  margin-bottom: 30px;
+}
+.px_20{
+  padding-right: 20px;
+  padding-left: 20px;
 }

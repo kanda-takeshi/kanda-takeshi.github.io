@@ -1,0 +1,70 @@
+.mt_30 {
+  margin-top: 30px;
+}
+
+.mt_50 {
+  margin-top: 50px;
+}
+
+.mt_150 {
+  margin-top: 150px;
+}
+
+.mb_30 {
+  margin-bottom: 30px;
+}
+
+.mb_50 {
+  margin-bottom: 50px;
+}
+
+.my_30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pt_50 {
+  padding-top: 50px;
+}
+
+.font_h2 {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.font_p {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.container-fluid.formWrapper {
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .mainContentTherd .menu {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .columnWrapper .images .left {
+    width: 100%;
+  }
+
+  .columnWrapper .images .right {
+    width: 100%;
+  }
+
+  .mainContentTherd .menu {
+    width: 100%;
+  }
+
+  .mainContent_second img.tv {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .mainContentTherd .menu {
+    width: 100%;
+  }
+}
