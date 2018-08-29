@@ -1,54 +1,70 @@
 @media screen and (max-width: 400px) {
   .br_pc {
-    display: none; }
+    display: none;
+  }
 
   .br_sp {
-    display: block; }
+    display: block;
+  }
 
   .disp_pc {
-    display: none; }
+    display: none;
+  }
 
   .disp_sp {
-    display: block; }
+    display: block;
+  }
 
   article p {
-    font-size: 20px; }
+    font-size: 20px;
+  }
 
   article img.width_250 {
-    width: 250px; }
+    width: 250px;
+  }
 
   article img.width_90pa {
-    width: 90%; }
+    width: 90%;
+  }
 
   .absolute {
-    font-size: 50px; }
+    font-size: 50px;
+  }
 
   .absolute {
     padding-top: 10px;
-    font-size: 40px; }
+    font-size: 40px;
+  }
 
   #skil img {
     width: 100%;
-    height: auto; } }
+    height: auto;
+  }
+}
 @media screen and (min-width: 400px) {
   .br_pc {
-    display: block; }
+    display: block;
+  }
 
   .br_sp {
-    display: none; }
+    display: none;
+  }
 
   .disp_pc {
-    display: block; }
+    display: block;
+  }
 
   .disp_sp {
-    display: none; }
+    display: none;
+  }
 
   article img.width_90pa {
     padding-right: 10px;
-    padding-left: 10px; }
+    padding-left: 10px;
+  }
 
   #skil img {
     width: 100%;
-    height: auto; } }
-
-/*# sourceMappingURL=index_respon.css.map */
+    height: auto;
+  }
+}

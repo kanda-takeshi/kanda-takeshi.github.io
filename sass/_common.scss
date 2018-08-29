@@ -4,6 +4,11 @@ p,h1,h2,h3,h4,h5,h6{
   padding: 0;
 }
 
+// iPhoneXで確認した時の右の余白削除
+.wrap{
+  overflow: hidden;
+}
+
 img{
   vertical-align: bottom;
 }

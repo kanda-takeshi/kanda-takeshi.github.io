@@ -27,15 +27,16 @@ gtag('config', 'UA-122962212-1');
 <!--  my css -->
 <link rel="stylesheet" href="../../css/progate.css">
 <link href="../../css/progate_second.css" rel="stylesheet">
+<script src="../../js/progate.js"></script>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
   <body>
+  <div class="wrap">
     <header>
-      
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default">
         
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".gnav">
@@ -49,10 +50,10 @@ gtag('config', 'UA-122962212-1');
         <div class="gnav collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li><a href="#study">学習言語</a></li>
-            <li><a href="#">特徴</a></li>
-            <li><a href="#">料金</a></li>
-            <li><a href="#">コラム</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#charac">特徴</a></li>
+            <li><a href="#money">料金</a></li>
+            <li><a href="#colm">コラム</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
           </ul>
         </div>
         
@@ -103,7 +104,7 @@ gtag('config', 'UA-122962212-1');
     </div>
     
     
-    <div class = "mainContent_second">
+    <div id="charac" class = "mainContent_second">
         <div class = "overRay_gray">
           <p>特徴</p>
         </div>
@@ -146,7 +147,7 @@ gtag('config', 'UA-122962212-1');
       </div>
       
 
-      <div class="container-fluid mainContentTherd pt_50">
+      <div id="money" class="container-fluid mainContentTherd pt_50">
       
         <div class="row menus">
           <div class="col-md-4 text-center">
@@ -243,7 +244,7 @@ gtag('config', 'UA-122962212-1');
         <br>- Facebook元役員</p>
       </div>
       
-      <div class="container columnWrapper">
+      <div id="colm" class="container columnWrapper">
         
         <div class = "title">
           <h1 class="text-center">コラム</h1>
@@ -316,7 +317,7 @@ gtag('config', 'UA-122962212-1');
       </div>
       
      
-      <div class="container-fluid formWrapper">
+      <div id="contact" class="container-fluid formWrapper">
         <div class = "buraind">
           <div class="">
           
@@ -384,6 +385,6 @@ gtag('config', 'UA-122962212-1');
         </div>
       </footer>
 
-    
+  </div>
   </body>
 </html>
