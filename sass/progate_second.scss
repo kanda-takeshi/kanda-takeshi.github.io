@@ -39,6 +39,11 @@
 
 // スマホ表示
 @media screen and (max-width: 600px){
+  
+  .br_sp{display: block;}
+  .br_pc{display: none;}
+  
+  
   .mainContentTherd .menu{
     width: 100%;
     margin: 0 auto;
@@ -62,6 +67,10 @@
 
 // PC表示
 @media screen and (min-width: 600px){
+  
+  .br_pc{display: block;}
+  .br_sp{display: none;}
+  
   .mainContentTherd .menu{
     width: 100%;
   }
