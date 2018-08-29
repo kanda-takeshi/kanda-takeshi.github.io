@@ -38,6 +38,40 @@ ul {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 400px) {
+  .br_pc {
+    display: none;
+  }
+
+  .br_sp {
+    display: block;
+  }
+
+  .disp_pc {
+    display: none;
+  }
+
+  .disp_sp {
+    display: block;
+  }
+}
+@media screen and (min-width: 400px) {
+  .br_pc {
+    display: block;
+  }
+
+  .br_sp {
+    display: none;
+  }
+
+  .disp_pc {
+    display: block;
+  }
+
+  .disp_sp {
+    display: none;
+  }
+}
 .none_padding .col-xs-4 {
   padding: 0;
 }

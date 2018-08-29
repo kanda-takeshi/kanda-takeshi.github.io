@@ -35,3 +35,22 @@ ul{
   padding-right: 20px;
   padding-left: 20px;
 }
+
+// スマホ表示
+@media screen and (max-width:400px)
+{
+  .br_pc{ display: none;}
+  .br_sp{ display: block;}
+  .disp_pc{ display: none;}
+  .disp_sp{ display: block;}
+}
+
+// PC表示
+@media screen and (min-width:400px)
+{
+  .br_pc{ display: block;}
+  .br_sp{ display: none;}
+  
+  .disp_pc{ display: block;}
+  .disp_sp{ display: none;}
+}
