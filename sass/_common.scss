@@ -1,3 +1,47 @@
+@charset "utf-8";
+
+$max_width:960px;
+
+// タブナビゲーションの設定
+.nav-tabs.back_green > li.active > a,
+.nav-tabs.back_green > li.active > a:hover,
+.nav-tabs.back_green > li.active > a:focus {
+  color: white;
+  cursor: default;
+  background-color: #8DE97A;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+article section.tab-pane{
+  max-width: $max_width;
+}
+
+.max_width_960{
+  max-width: $max_width;
+}
+
+.none_padding .col-xs-4{
+  padding: 0;
+}
+
+.panel-body.none_padding{
+  padding: 0;
+}
+
+header img{
+  max-width: $max_width;
+}
+
+.width_harf{
+  width: 50%;
+}
+
+main.panel.panel-default.panel_center{
+  max-width: $max_width;
+  margin: 0 auto;
+}
+
 // 規定スタイル解除
 p,h1,h2,h3,h4,h5,h6{
   margin: 0;
@@ -11,6 +55,23 @@ p,h1,h2,h3,h4,h5,h6{
 
 img{
   vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+.img_harf{
+  width: 50%;
+  height: auto;
+}
+.img_70{
+  width: 70%;
+  height: auto;
+}
+.img_20par{
+  width: 20%;
+  height: auto;
+}
+.background_gray{
+  background-color: #E9ECEB;
 }
 .border{
   border: 1px solid black;
@@ -31,9 +92,41 @@ ul{
 .mb_30{
   margin-bottom: 30px;
 }
+.my_20{
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .px_20{
   padding-right: 20px;
   padding-left: 20px;
+}
+.px_30{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.px_50{
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.py_20{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.pb_30{
+  padding-bottom: 30px;
+}
+.p_30{
+  padding: 30px;
+}
+
+
+.container-fluid.padding_none{
+  padding: 0;
+}
+
+
+footer{
+  max-width: $max_width;
 }
 
 // スマホ表示
