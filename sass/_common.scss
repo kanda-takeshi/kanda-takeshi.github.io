@@ -13,6 +13,16 @@ $max_width:960px;
   border-bottom-color: transparent;
 }
 
+.navbar_center{
+    margin: 0 auto;
+    display: table;
+    float:none;
+}
+
+.inline_block{
+  display: inline-block;
+}
+
 article section.tab-pane{
   max-width: $max_width;
 }
@@ -29,7 +39,7 @@ article section.tab-pane{
   padding: 0;
 }
 
-header img{
+header{
   max-width: $max_width;
 }
 
