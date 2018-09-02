@@ -19,12 +19,15 @@ a {
 body {
   -webkit-font-smoothing: antialiased;
   font-family:'Hiragino Kaku Gothic ProN W3', sans-serif;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /*-------  ここまで共通のCSS  --------*/
 header
 {
   width:100%;
+  max-width: 1300px;
   height:50px;
   line-height:50px;
   border-bottom:solid 1px #eee;
@@ -67,6 +70,7 @@ header .navi li a:hover
 .topContentOverRay
 {
   width:100%;
+  max-width: 1300px;
   top:50px;
   position:absolute;
   z-index:-2;
@@ -78,6 +82,7 @@ header .navi li a:hover
   background-image:url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/top.jpg");
   height:575px;
   width:100%;
+  max-width: 1300px;
   top:0px;
   background-size:cover;
   position:absolute;
@@ -638,6 +643,7 @@ header .navi li a:hover
 footer
 {
   width:100%;
+  max-width: 1300px;
   text-align:center;
 }
 
