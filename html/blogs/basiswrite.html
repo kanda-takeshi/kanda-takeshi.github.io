@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962212-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-122962212-1');
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>htmlの基本構造</title>
+<!-- Bootstrap CSS -->
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<!--  jquery -->
+<script src="../../js/jquery-1.11.1.min.js" type="text/jscript"></script>
+<!-- bootstrap js -->
+<script src="../../js/bootstrap.js"></script>
+<!--  my css -->
+<link href="../../css/blogs.css" rel="stylesheet">
+<!-- my js -->
+
+  
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+  <header class="container-fluid padding_none">
+    <a href="../../index.html"><img class="img-respoisive" src="../../img/top.png" alt="社会からの独立を目指すサイト"></a>
+    <nav class="background_gray py_30 container-fluid padding_none max_width_960">
+      <ul class="py_20 text-center">
+        <li class="px_10 inline_block"><a href="../../index.html">トップページへ</a></li>
+        <li class="px_10 inline_block"><a href="../blogs/brackets.html">前の記事へ</a></li>
+        <li class="px_10 inline_block"><a href="#">次の記事へ(準備中)</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main role="main">
+    
+    <section class="container-fluid max_width_960 padding_none">
+      
+      <h1 class="my_30 text-center">【Mac・環境構築編】BracketsでWebページを作るには<br class="br_pc">(その２)</h1>
+      
+      <div class="background_gray">
+        <img src="../../img/kaihatu.png" alt="パソコン作業する女子学生" class="img_harf center-block">
+      </div>
+      
+    </section>
+    
+    <section class="trouble container-fluid max_width_960">
+      
+      <div class="row my_30">
+      
+        <div class="text-center popover top show center-block" style="position: relative; padding: 25px;">
+          <div class="arrow"></div>
+          <p>Bracketsでコーディングする準備は整ったけど、この後はどうすればいいの？自分で作っていく為の足がかりがほしい。フォルダとかどうやってつくったらいいの？</p>
+        </div>
+        
+        
+        <img src="../../img/nayami_girl.png" class="img-responsive center-block img_harf" alt="悩める女子学生">
+        
+      </div>
+      
+      <p class="my_30">といった人に向けて記事を書いていきます。</p>
+      
+    </section>
+    
+    <section class="contents_table my_30 container-fluid  max_width_960 border py_20 px_50 width_harf">
+      <h2 class="text-center">記事が役立つ人</h2>
+      <ul class="py_20">
+        <li>Webページを制作したい人</li>
+        <li>Bracketsを使いたい人</li>
+        <li>初めてBracketsを使う人</li>
+      </ul>
+    </section>
+    
+    <section class="contents_table my_30 container-fluid  max_width_960 border py_20 px_50 width_harf">
+      <h2 class="text-center">記事内コンテンツ</h2>
+      <ul class="py_20">
+        <li><a href="#foldermake">作業フォルダを作る</a></li>
+        <li><a href="#recognition">Bracketsにフォルダを認識させる</a></li>
+        <li><a href="#filemake">ファイルを作る（index.html）</a></li>
+        <li><a href="#summary">まとめ</a></li>
+      </ul>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">作業フォルダを作る</h2>
+      <p class="p_30">まずは作業をしていくのに必要なフォルダを<br class="br_sp">作成していきます。<br class="br_pc"><br class="br_sp"><br class="br_sp">どこに作ってもいいんですが、ここでは<br class="br_sp">分かりやすくデスクトップに<br class="br_sp">作成していきます。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">さっそく作業用フォルダを<br class="br_sp">つくっていきます。<br class="br_sp"><br class="br_sp">まずは、デスクトップの何もないところで<br class="br_sp">右クリックします。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/rightclick1.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">プルダウンメニューが出るので、<br class="br_sp">新規フォルダをクリックします。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/rightclick2.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">フォルダができあがります。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/newfolder.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">そのままリネームします。<br class="br_sp">フォルダ名は「portfolio」とします。<br class="br_sp">※好きな名前で問題ないです。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/rename.png" class="img_70 center-block border">
+      </div>
+      
+    </section>
+    
+    <section id="recognition" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">Bracketsにフォルダを認識させる</h2>
+      <p class="p_30">続いて、Bracketsに、さっき作成した<br class="br_sp">フォルダを認識させる作業です。<br class="br_pc"><br class="br_sp"><br class="br_sp">作業フォルダが複数になった時にも<br class="br_sp">使用する項目ですので、<br class="br_sp">覚えておいたほうが吉です。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">デスクトップ左上のメニューから、<br class="br_sp">「ファイル」をクリックします。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/folderopen.png" class="img_70 center-block border">
+        
+        <img src="../../img/blogs/brackets/2/newcreate/folderopen_zoom.png" class="img_70 center-block border mt_30">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">デスクトップ左上のメニューから、<br class="br_sp">「ファイル」をクリックします。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/folderopenlast1.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">どのファイルを開くかの画面が<br class="br_sp">出てくるので、デスクトップを選択します。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/folderopenlast3.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">続いて、「portfolio」フォルダを探して<br class="br_sp">クリックします。<br class="br_sp"><br class="br_sp">次に、右下の「開く」をクリック<br class="br_sp">してください。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/folderopenlast2.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">Brackets画面の左側に、「portfolio」と<br class="br_sp">表示されていたら、認識成功です。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/folderninsiki1.png" class="img_70 center-block border">
+        <img src="../../img/blogs/brackets/2/newcreate/folderninsiki2.png" class="img_70 center-block border mt_30">
+      </div>
+      
+    </section>
+    
+    <section id="filemake" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">ファイルを作る</h2>
+      <p class="p_30">続いて、コーディングしていく為の<br class="br_sp">ファイルを作成していきます。<br class="br_sp"><br class="br_sp"><br class="br_pc">こちらも、頻繁におこなう作業なので<br class="br_sp">覚えておいたほうが良いですね。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">Brackets画面の左枠、どこでもいいので<br class="br_sp">右クリックします。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/filecreate.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">プルダウンメニューが出てくるので、<br class="br_sp">「新しいファイル」をクリックします。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/filecreate1.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">「名称未設定」というものが<br class="br_sp">出来上がりますので、そのまま<br class="br_sp">ファイル名「index.html」を打ち込みます。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/filecreate2.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">きちんと「.html」まで打ち込みます。<br class="br_sp">エンターを押して確定させてください。</p>
+        <img src="../../img/blogs/brackets/2/newcreate/filecreate3.png" class="img_70 center-block border">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">これで、htmlを記述する準備が整いました。<br class="br_sp">真ん中に大きな白い枠があると思います。<br class="br_sp">そこにコーディングしていきます。</p>
+        <img src="../../img/blogs/brackets/2/indexwrite/firstwrite.png" class="img_70 center-block border">
+      </div>
+      
+    </section>
+    
+    <section id="summary" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">まとめ</h2>
+      <p class="p_30">ここまでで、やっと環境が整いました。<br class="br_sp">次回からは実際にコーディングを<br class="br_sp">していきます。<br class="br_sp"><br class="br_sp"><br class="br_pc">そんなに難しくないので（たぶん）<br class="br_sp">スラスラと記述していって頂ければと<br class="br_sp">思います。</p>
+    </section>
+    
+  </main>
+  
+  <nav class="background_gray py_30 container-fluid padding_none max_width_960">
+    <ul class="py_20 text-center">
+      <li class="px_10 inline_block"><a href="../../index.html">トップページへ</a></li>
+      <li class="px_10 inline_block"><a href="../blogs/brackets.html">前の記事へ</a></li>
+      <li class="px_10 inline_block"><a href="#">次の記事へ(準備中)</a></li>
+    </ul>
+  </nav>
+  <footer class="text-center bg-primary center-block">
+    <small>Copyright Kanda Takeshi</small>
+  </footer>
+</div>
+</body>
+</html>
