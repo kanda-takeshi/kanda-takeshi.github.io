@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962212-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-122962212-1');
+</script>
+  
+<!--  Google AdSense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1856259713843580",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>htmlの基本構造</title>
+<!-- Bootstrap CSS -->
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<!--  jquery -->
+<script src="../../js/jquery-1.11.1.min.js" type="text/jscript"></script>
+<!-- bootstrap js -->
+<script src="../../js/bootstrap.js"></script>
+<!--  my css -->
+<link href="../../css/blogs.css" rel="stylesheet">
+<!-- my js -->
+
+  
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+  <header class="container-fluid padding_none">
+    <a href="../../index.html"><img class="img-respoisive" src="../../img/top.png" alt="社会からの独立を目指すサイト"></a>
+    <nav class="background_gray py_30 container-fluid padding_none max_width_960">
+      <ul class="py_20 text-center">
+        <li class="px_10 inline_block"><a href="../../index.html">トップページへ</a></li>
+        <li class="px_10 inline_block"><a href="../blogs/basiswrite.html">前の記事へ</a></li>
+        <li class="px_10 inline_block"><a href="#">次の記事へ(準備中)</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main role="main">
+    
+    <section class="container-fluid max_width_960 padding_none">
+      
+      <h1 class="my_30 text-center">【HTML基本編】Bracketsでhtmlを書く</h1>
+      
+      <div class="background_gray">
+        <img src="../../img/kaihatu.png" alt="パソコン作業する女子学生" class="img_harf center-block">
+      </div>
+      
+    </section>
+    
+    <section class="trouble container-fluid max_width_960">
+      
+      <div class="row my_30">
+      
+        <div class="text-center popover top show center-block" style="position: relative; padding: 25px;">
+          <div class="arrow"></div>
+          <p>htmlを書く準備はできたけど、どうやって書けばいいの？基本からしっかりと教えてほしい。初心者なんです。</p>
+        </div>
+        
+        
+        <img src="../../img/nayami_girl.png" class="img-responsive center-block img_harf" alt="悩める女子学生">
+        
+      </div>
+      
+      <p class="my_30">といった人に向けて記事を書いていきます。</p>
+      
+    </section>
+    
+    <section class="contents_table my_30 container-fluid  max_width_960 border py_20 px_50 width_harf">
+      <h2 class="text-center">記事が役立つ人</h2>
+      <ul class="py_20">
+        <li>Webページを制作したい人</li>
+        <li>htmlって何？知りたいという人</li>
+        <li>初めてBracketsを使う人</li>
+      </ul>
+    </section>
+    
+    <section class="contents_table my_30 container-fluid  max_width_960 border py_20 px_50 width_harf">
+      <h2 class="text-center">記事内コンテンツ</h2>
+      <ul class="py_20">
+        <li><a href="#foldermake">HTMLの基本構造</a></li>
+        <li><a href="#recognition">HTMLの書き方</a></li>
+        <li><a href="#filemake">HTMLの記述</a></li>
+        <li><a href="#summary">まとめ</a></li>
+      </ul>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">HTMLの基本構造</h2>
+      <p class="p_30">HTMLとは、文章にマークアップ(意味付け)<br class="br_sp">をしていく言語です。<br class="br_sp"><br class="br_sp"><br class="br_pc">タグというものを使って意味付けて<br class="br_sp">いくんですが、まずは基本的な構造の<br class="br_sp">図を見ていきます。<br class="br_sp"><br class="br_sp"><br class="br_pc"><br class="br_pc">大まかにいうと、4つの<br class="br_sp">「html要素」「head要素」<br class="br_sp">「body要素」「footer要素」に分かれます。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">イメージ図としてはこうです。<br class="br_sp"><br class="br_pc">「head」「body」と上から順番にきて、<br class="br_sp">その全てを「html」が包んでいる感じです。<br class="br_sp"><br class="br_pc">それでは、順番に説明していきます。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/html_zu.png" class="img_harf center-block border">
+      </div>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h3 class="h3_heading">head要素</h3>
+      <p class="p_30">コンピュータが参照する情報の集まり。<br class="br_sp"><br class="br_pc">「検索エンジン」等が参照するとても<br class="br_sp">重要な情報を書いていく場所です。<br class="br_sp"><br class="br_sp"><br class="br_pc">ここを間違えると、そもそも動作しない<br class="br_sp">ので、しっかりと書いていきましょう。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <img src="../../img/blogs/brackets/3/indexwrite/html_header.png" class="img_harf center-block border">
+      </div>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h3 class="h3_heading mb_30">body要素</h3>
+      <p class="mb_30">ブラウザに表示される情報を記述していくエリア。<br class="br_sp"><br class="br_pc">皆さんがネット検索などで普段見ているところです。<br class="br_sp"><br class="br_sp"><br class="br_pc"><br class="br_pc">この説明も、bodyタグ内に書いています。<br class="br_sp">主に人が見るところですが、「検索エンジン」も<br class="br_sp">見ています。<br class="br_pc"><br class="br_sp"><br class="br_sp">なので、この記事には何が書いていて、<br class="br_sp">どんな人に役立つのか。<br class="br_pc"><br class="br_pc"><br class="br_sp"><br class="br_sp">しっかりと書いて、「マークアップ」していく<br class="br_sp">必要があります。<br class="br_sp"><br class="br_sp">bodyの記述が、正直、一番難しいです。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <img src="../../img/blogs/brackets/3/indexwrite/html_body.png" class="img_harf center-block border">
+      </div>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">はじめてのHTML記述</h2>
+      <p class="p_30">最初らへんは、まさに「おまじない」<br class="br_sp">という感じです。<br class="br_pc">いつものやつです。<br class="br_sp"><br class="br_sp">しかし、これがないとHTMLとして<br class="br_sp">機能しませんので、<br class="br_pc">もれの無ように<br class="br_sp">記述していって下さい。<br class="br_sp"><br class="br_sp">ここでは最低限のコーディングだけします。</p>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">まずはHTMLのバージョンを記述します。<br class="br_sp">必ず1行目に書いてください。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/doc.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/doc_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">続いて、htmlタグの記述です。最初に学習した、「HTMLの基本構造って？」を思い出しながら書いてくださいね。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/html.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/html_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+      
+      <div class="mt_30 p_30 boarder_radius background_gray2">
+        <p class="mb_30">続いて、headタグの記述です。<br class="br_sp">改行して、見やすいように<br class="br_sp">記述していくのがポイントです。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/kaigyou.png" class="img_70 center-block border mb_30 disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/kaigyou_sp.png" class="img_70 center-block border mb_30 disp_sp">
+        <img src="../../img/blogs/brackets/3/indexwrite/tab.png" class="img_70 center-block border mb_30 disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/head.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/head_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h3 class="h3_heading">headの書き方</h3>
+      <p class="p_30">つづいて、headタグ内におまじないを書いていきます。コンピュータが読み取るところなので、もれのないように書いていきます。</p>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="mb_30">meta情報というものを書いていきます。<br class="br_sp">どの文字コードを使うのか？<br class="br_sp">という指定です。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/charset.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/charset_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="mb_30">最後に、タイトルを記述。<br class="br_sp">ここは、ウィンドウ左上の名称です。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/title.png" class="img_70 center-block border mb_30 disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/title_portfolio.png" class="img_70 center-block border mb_30 disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/setumei.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/title_sp.png" class="img_70 center-block border mb_30 disp_sp">
+        <img src="../../img/blogs/brackets/3/indexwrite/title_portfolio_sp.png" class="img_70 center-block border mb_30 disp_sp">
+        <img src="../../img/blogs/brackets/3/indexwrite/setumei_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h3 class="h3_heading mb_30">bodyの書き方</h3>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="mb_30">bodyタグを書いていきます。<br class="br_sp">このタグは、headタグの下に<br class="br_sp">書いていきます。<br class="br_sp"><br class="br_sp">「頭」の下は「体」、わかりやすいですね。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/body.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/body_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="mb_30">次は、bodyタグの中に「header」要素を<br class="br_sp">書いていきます。<br class="br_pc"><br class="br_sp"><br class="br_sp">さっき「head」を書いたのに「header」が<br class="br_sp">きました。<br class="br_sp"><br class="br_sp">共通する点は、「一番上」ということです。<br class="br_pc"><br class="br_pc"><br class="br_sp">bodyタグ内の一番上だから、「header」。<br class="br_sp"><br class="br_sp">ややこしいですね。<br class="br_pc">ここは、<br class="br_sp">「headはコンピュータ用」<br class="br_sp">「headerは人間用」に書いていくものだと<br class="br_sp">区別しましょう。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/body2.png" class="img_70 center-block border mb_30 disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/header.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/body2_sp.png" class="img_70 center-block border mb_30 disp_sp">
+        <img src="../../img/blogs/brackets/3/indexwrite/header_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="mb_30">最後に、「footer」タグを書きます。<br class="br_sp">締めは「足」ということですね。<br class="br_sp">これは分かりやすいです。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/footer.png" class="img_70 center-block border disp_pc">
+        <img src="../../img/blogs/brackets/3/indexwrite/footer_sp.png" class="img_70 center-block border disp_sp">
+      </div>
+    </section>
+    
+    <section id="foldermake" class="container-fluid max_width_960 mb_30">
+      <h3 class="h3_heading mb_30">今のHTMLの状態</h3>
+      <p class="mb_30">最後に、今どんな状態なのか、図でまとめます。</p>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="mb_30">最初と違うところは、<br class="br_sp">「body」タグの中に「header」タグ、<br class="br_sp">「footer」タグが追加されたことです。</p>
+        <img src="../../img/blogs/brackets/3/indexwrite/html_last.png" class="img_70 center-block border">
+      </div>
+    </section>
+    
+    <section id="summary" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">まとめ</h2>
+      <p class="p_30">長くなったので、今回はここまでとします。<br class="br_sp"><br class="br_pc">次回は、実際に見た目の部分をつくっていきます。<br class="br_pc"><br class="br_sp"><br class="br_sp">「要素を装飾する」言語もでてきて、<br class="br_sp">見た目が良い画面になっていきます。</p>
+    </section>
+    
+  </main>
+  
+  <nav class="background_gray py_30 container-fluid padding_none max_width_960">
+    <ul class="py_20 text-center">
+      <li class="px_10 inline_block"><a href="../../index.html">トップページへ</a></li>
+      <li class="px_10 inline_block"><a href="../blogs/basiswrite.html">前の記事へ</a></li>
+      <li class="px_10 inline_block"><a href="#">次の記事へ(準備中)</a></li>
+    </ul>
+  </nav>
+  <footer class="text-center bg-primary center-block">
+    <small>Copyright Kanda Takeshi</small>
+  </footer>
+</div>
+</body>
+</html>
