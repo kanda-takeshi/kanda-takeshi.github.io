@@ -43,6 +43,10 @@ header {
   width: 50%;
 }
 
+.width_70 {
+  width: 70%;
+}
+
 main.panel.panel-default.panel_center {
   max-width: 960px;
   margin: 0 auto;
@@ -109,6 +113,11 @@ ul {
   margin-bottom: 30px;
 }
 
+.mx_30 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
 .mt_30 {
   margin-top: 30px;
 }
@@ -149,6 +158,10 @@ ul {
 
 .pb_30 {
   padding-bottom: 30px;
+}
+
+.P_5 {
+  padding: 5px;
 }
 
 .p_30 {
