@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // スマホ表示
-@media screen and (max-width:400px)
+@media screen and (max-width:800px)
 {
   article p{
     font-size: 20px;
@@ -18,6 +18,15 @@
   .absolute{
     padding-top: 10px;
     font-size: 40px;
+  }
+  
+  .html{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .sp_font_size{
+    font-size: 20px;
   }
   
   #skil
