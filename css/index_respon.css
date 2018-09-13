@@ -47,6 +47,10 @@
     padding-left: 10px;
   }
 
+  .pc_font_size {
+    font-size: 25px;
+  }
+
   #skil img {
     width: 100%;
     height: auto;
