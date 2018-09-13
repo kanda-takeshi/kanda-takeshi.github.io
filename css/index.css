@@ -216,3 +216,15 @@ footer {
 .font_size_20 {
   font-size: 20px;
 }
+
+.back_color_green {
+  background-color: #EEFCE6;
+}
+
+.back_color_blue {
+  background-color: #FEE7E8;
+}
+
+.background_white {
+  background-color: white;
+}
