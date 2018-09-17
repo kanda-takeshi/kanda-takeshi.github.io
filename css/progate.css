@@ -15,6 +15,11 @@
   float: none;
 }
 
+.back_harf_yellow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+
 .inline_block {
   display: inline-block;
 }
