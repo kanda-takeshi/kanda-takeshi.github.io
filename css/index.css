@@ -19,6 +19,11 @@
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
+.back_harf_green {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #DBFD81));
+  background: linear-gradient(transparent 50%, #DBFD81 50%);
+}
+
 .inline_block {
   display: inline-block;
 }
