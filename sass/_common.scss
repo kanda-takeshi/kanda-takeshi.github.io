@@ -13,6 +13,10 @@ $max_width:960px;
   border-bottom-color: transparent;
 }
 
+h1,h2,p{
+  font-family: 'Meiryo UI','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+}
+
 .navbar_center{
     margin: 0 auto;
     display: table;
@@ -74,6 +78,12 @@ p,h1,h2,h3,h4,h5,h6{
   overflow: hidden;
 }
 
+// 共通の文字サイズ
+article p{
+  font-size: 16px;
+  //line-height: 1.9em;
+}
+
 img{
   vertical-align: bottom;
   width: 100%;
@@ -131,6 +141,9 @@ ul{
   margin-left: 20px;
   margin-right: 20px;
 }
+.ml_20{
+  margin-left: 20px;
+}
 .px_10{
   padding-right: 10px;
   padding-left: 10px;
@@ -146,6 +159,9 @@ ul{
 .px_50{
   padding-right: 50px;
   padding-left: 50px;
+}
+.pt_30{
+  padding-top: 30px;
 }
 .py_20{
   padding-top: 20px;
@@ -178,6 +194,29 @@ footer{
   .br_sp{ display: block;}
   .disp_pc{ display: none;}
   .disp_sp{ display: block;}
+  
+  h1{
+    font-size: 35px;
+  }
+  
+  .my_30_sp{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .mx_30_sp{
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .mt_30_sp{
+    margin-top: 30px;
+  }
+  .mb_30_sp{
+    margin-bottom: 30px;
+  }
+  .my_20_sp{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 // PC表示

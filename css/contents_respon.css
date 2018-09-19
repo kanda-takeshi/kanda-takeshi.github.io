@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .nav-tabs.back_green > li.active > a,
 .nav-tabs.back_green > li.active > a:hover,
 .nav-tabs.back_green > li.active > a:focus {
@@ -6,6 +7,10 @@
   background-color: #8DE97A;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
+}
+
+h1, h2, p {
+  font-family: 'Meiryo UI','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
 }
 
 .navbar_center {
@@ -68,6 +73,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .wrap {
   overflow: hidden;
+}
+
+article p {
+  font-size: 16px;
 }
 
 img {
@@ -140,6 +149,10 @@ ul {
   margin-right: 20px;
 }
 
+.ml_20 {
+  margin-left: 20px;
+}
+
 .px_10 {
   padding-right: 10px;
   padding-left: 10px;
@@ -158,6 +171,10 @@ ul {
 .px_50 {
   padding-right: 50px;
   padding-left: 50px;
+}
+
+.pt_30 {
+  padding-top: 30px;
 }
 
 .py_20 {
@@ -200,6 +217,33 @@ footer {
 
   .disp_sp {
     display: block;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .my_30_sp {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .mx_30_sp {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .mt_30_sp {
+    margin-top: 30px;
+  }
+
+  .mb_30_sp {
+    margin-bottom: 30px;
+  }
+
+  .my_20_sp {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 400px) {
