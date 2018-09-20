@@ -9,10 +9,6 @@
   border-bottom-color: transparent;
 }
 
-h1, h2, p {
-  font-family: 'Meiryo UI','Osaka','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
-}
-
 .navbar_center {
   margin: 0 auto;
   display: table;
@@ -20,10 +16,12 @@ h1, h2, p {
 }
 
 .back_harf_yellow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #DBFD81));
   background: linear-gradient(transparent 50%, #DBFD81 50%);
 }
 
@@ -219,6 +217,11 @@ footer {
 
   p {
     font-size: 18px;
+    font-weight: bold;
+  }
+
+  h1, h2, p {
+    font-family: 'Meiryo UI','Osaka','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
   }
 
   h1 {
@@ -509,7 +512,8 @@ header .navi li a:hover {
   width: 300px;
   display: inline-block;
   margin-bottom: 100px;
-  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .mainContentTherd .menus .menuWrapper .menu {
@@ -720,7 +724,8 @@ header .navi li a:hover {
 }
 
 .imageWrapper {
-  box-shadow: 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px #000000;
+          box-shadow: 1px 1px #000000;
 }
 
 .columnWrapper .loadButton {

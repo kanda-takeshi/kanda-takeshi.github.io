@@ -13,10 +13,6 @@ $max_width:960px;
   border-bottom-color: transparent;
 }
 
-h1,h2,p{
-  font-family: 'Meiryo UI','Osaka','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
-}
-
 .navbar_center{
     margin: 0 auto;
     display: table;
@@ -197,6 +193,11 @@ footer{
   
   p{
     font-size: 18px;
+    font-weight: bold;
+  }
+  
+  h1,h2,p{
+    font-family: 'Meiryo UI','Osaka','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
   }
   
   h1{
