@@ -10,7 +10,7 @@
 }
 
 h1, h2, p {
-  font-family: 'Meiryo UI','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
+  font-family: 'Meiryo UI','Osaka','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
 }
 
 .navbar_center {
@@ -20,12 +20,10 @@ h1, h2, p {
 }
 
 .back_harf_yellow {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #DBFD81));
   background: linear-gradient(transparent 50%, #DBFD81 50%);
 }
 
