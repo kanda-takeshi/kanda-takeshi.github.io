@@ -24,7 +24,7 @@ $max_width:960px;
 }
 
 .back_harf_green{
-  background: linear-gradient(transparent 50%, #DBFD81 50%);
+  background: linear-gradient(transparent 50%, #D4FC82 50%);
 }
 
 .inline_block{
@@ -191,12 +191,12 @@ footer{
   .disp_pc{ display: none;}
   .disp_sp{ display: block;}
   
-  p{
+  p,li{
     font-size: 18px;
     font-weight: bold;
   }
   
-  h1,h2,p{
+  h1,h2,p,li{
     font-family: 'Meiryo UI','Osaka','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
   }
   

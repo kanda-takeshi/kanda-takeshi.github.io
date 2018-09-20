@@ -13,10 +13,29 @@
   padding: 10px;
 }
 
-.h3_heading{
-  padding: 10px;
-  border-top: solid 5px black;
-  border-bottom: solid 5px black;
+.h3_heading {
+position: relative;
+padding-left: 25px;
+}
+
+.h3_heading:before {
+position: absolute;
+content: '';
+bottom: -3px;
+left: 0;
+width: 0;
+height: 0;
+border: none;
+border-left: solid 15px transparent;
+border-bottom: solid 15px #77EA8F;
+}
+.h3_heading:after {
+position: absolute;
+content: '';
+bottom: -3px;
+left: 10px;
+width: 100%;
+border-bottom: solid 3px #77EA8F;
 }
 
 .contents_table{
