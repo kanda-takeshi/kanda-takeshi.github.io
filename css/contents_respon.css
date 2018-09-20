@@ -219,6 +219,10 @@ footer {
     display: block;
   }
 
+  p {
+    font-size: 18px;
+  }
+
   h1 {
     font-size: 35px;
   }
