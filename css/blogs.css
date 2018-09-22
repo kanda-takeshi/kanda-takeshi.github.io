@@ -16,12 +16,10 @@
 }
 
 .back_harf_yellow {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #D4FC82));
   background: linear-gradient(transparent 50%, #D4FC82 50%);
 }
 
@@ -193,6 +191,10 @@ ul {
 .py_30 {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.pb_20 {
+  padding-bottom: 20px;
 }
 
 .pb_30 {

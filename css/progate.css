@@ -16,12 +16,10 @@
 }
 
 .back_harf_yellow {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #D4FC82));
   background: linear-gradient(transparent 50%, #D4FC82 50%);
 }
 
@@ -193,6 +191,10 @@ ul {
 .py_30 {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.pb_20 {
+  padding-bottom: 20px;
 }
 
 .pb_30 {
@@ -537,8 +539,7 @@ header .navi li a:hover {
   width: 300px;
   display: inline-block;
   margin-bottom: 100px;
-  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .mainContentTherd .menus .menuWrapper .menu {
@@ -749,8 +750,7 @@ header .navi li a:hover {
 }
 
 .imageWrapper {
-  -webkit-box-shadow: 1px 1px #000000;
-          box-shadow: 1px 1px #000000;
+  box-shadow: 1px 1px #000000;
 }
 
 .columnWrapper .loadButton {
