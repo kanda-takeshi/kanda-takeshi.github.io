@@ -132,12 +132,20 @@ ul {
   margin-left: 30px;
 }
 
+.ml_30 {
+  margin-left: 30px;
+}
+
 .mt_30 {
   margin-top: 30px;
 }
 
 .mb_30 {
   margin-bottom: 30px;
+}
+
+.mb_50 {
+  margin-bottom: 50px;
 }
 
 .my_20 {
@@ -169,6 +177,10 @@ ul {
   padding-left: 50px;
 }
 
+.pt_10 {
+  padding-top: 10px;
+}
+
 .pt_30 {
   padding-top: 30px;
 }
@@ -178,8 +190,17 @@ ul {
   padding-bottom: 20px;
 }
 
+.py_30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .pb_30 {
   padding-bottom: 30px;
+}
+
+.pb_50 {
+  padding-bottom: 50px;
 }
 
 .P_5 {
@@ -217,6 +238,7 @@ footer {
 
   p, li {
     font-size: 16px;
+    letter-spacing: 3px;
   }
 
   h1, h2, p, li {
@@ -243,6 +265,10 @@ footer {
 
   .mb_30_sp {
     margin-bottom: 30px;
+  }
+
+  .mb_50_sp {
+    margin-bottom: 50px;
   }
 
   .my_20_sp {
