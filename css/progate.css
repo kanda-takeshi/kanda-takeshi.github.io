@@ -16,10 +16,12 @@
 }
 
 .back_harf_yellow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #D4FC82));
   background: linear-gradient(transparent 50%, #D4FC82 50%);
 }
 
@@ -37,6 +39,10 @@ article section.tab-pane {
 
 .none_padding .col-xs-4 {
   padding: 0;
+}
+
+.nav > li.none_padding > a {
+  padding: 10px 0px;
 }
 
 .panel-body.none_padding {
@@ -553,7 +559,8 @@ header .navi li a:hover {
   width: 300px;
   display: inline-block;
   margin-bottom: 100px;
-  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .mainContentTherd .menus .menuWrapper .menu {
@@ -764,7 +771,8 @@ header .navi li a:hover {
 }
 
 .imageWrapper {
-  box-shadow: 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px #000000;
+          box-shadow: 1px 1px #000000;
 }
 
 .columnWrapper .loadButton {

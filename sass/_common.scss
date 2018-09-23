@@ -43,6 +43,10 @@ article section.tab-pane{
   padding: 0;
 }
 
+.nav > li.none_padding > a {
+  padding: 10px 0px;
+}
+
 .panel-body.none_padding{
   padding: 0;
 }
