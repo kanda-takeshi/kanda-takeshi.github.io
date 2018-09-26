@@ -3,10 +3,16 @@
 .nav-tabs.back_green > li.active > a:hover,
 .nav-tabs.back_green > li.active > a:focus {
   color: white;
-  cursor: default;
   background-color: #8DE97A;
   border: 1px solid #ddd;
-  border-bottom-color: transparent;
+}
+
+.nav-tabs.back_blue > li.active > a,
+.nav-tabs.back_blue > li.active > a:hover,
+.nav-tabs.back_blue > li.active > a:focus {
+  color: white;
+  background-color: #7BD8F3;
+  border: 1px solid #ddd;
 }
 
 .navbar_center {
@@ -16,12 +22,10 @@
 }
 
 .back_harf_yellow {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #D4FC82));
   background: linear-gradient(transparent 50%, #D4FC82 50%);
 }
 
@@ -581,8 +585,7 @@ header .navi li a:hover {
   width: 300px;
   display: inline-block;
   margin-bottom: 100px;
-  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .mainContentTherd .menus .menuWrapper .menu {
@@ -793,8 +796,7 @@ header .navi li a:hover {
 }
 
 .imageWrapper {
-  -webkit-box-shadow: 1px 1px #000000;
-          box-shadow: 1px 1px #000000;
+  box-shadow: 1px 1px #000000;
 }
 
 .columnWrapper .loadButton {

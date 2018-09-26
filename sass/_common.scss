@@ -7,10 +7,17 @@ $max_width:960px;
 .nav-tabs.back_green > li.active > a:hover,
 .nav-tabs.back_green > li.active > a:focus {
   color: white;
-  cursor: default;
   background-color: #8DE97A;
   border: 1px solid #ddd;
-  border-bottom-color: transparent;
+}
+
+// タブナビゲーションの設定
+.nav-tabs.back_blue > li.active > a,
+.nav-tabs.back_blue > li.active > a:hover,
+.nav-tabs.back_blue > li.active > a:focus {
+  color: white;
+  background-color: #7BD8F3;
+  border: 1px solid #ddd;
 }
 
 .navbar_center{
