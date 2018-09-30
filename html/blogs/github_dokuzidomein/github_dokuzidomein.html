@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122962212-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-122962212-1');
+</script>
+  
+<!--  Google AdSense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1856259713843580",
+    enable_page_level_ads: true
+  });
+</script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="GitHubに独自ドメイン設定してHTTPS化,CNAMEとAレコード両方対応,詳しく解説">
+<meta name="keywords" content="Github,独自ドメイン,お名前.com,HTTPS,CNAME,Aレコード">
+<title>GitHubPagesに独自ドメイン設定後HTTPSに対応させる|独自ドメイン取得から設定まで[Aレコード][CNAME]完全対応</title>
+<!-- Bootstrap CSS -->
+<link href="../../../css/bootstrap.css" rel="stylesheet">
+<!--  jquery -->
+<script src="../../../js/jquery-1.11.1.min.js" type="text/jscript"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.js"></script>
+<!--  my css -->
+<link href="../../../css/blogs.css" rel="stylesheet">
+<!-- my js -->
+
+  
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div class="wrap">
+  <header class="container-fluid padding_none">
+    <a href="../../../index.html"><img class="img-respoisive" src="../../../img/top.png" alt="社会からの独立を目指すサイト"></a>
+    <nav class="background_gray py_30 container-fluid padding_none max_width_960">
+      <ul class="py_20 text-center">
+        <li class="px_10 inline_block"><a href="../../../index.html">トップページへ</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main role="main">
+    
+    <section class="container-fluid max_width_960 padding_none">
+      
+      <h1 class="px_respon my_30 text-center">GitHubPagesに独自ドメイン設定後HTTPSに対応させる|<br class="br_sp">独自ドメイン取得から設定まで<br class="br_pc">[Aレコード][CNAME]完全対応</h1>
+      
+      <div class="background_gray">
+        <img src="../../../img/blogs/writer/blogger_woman.png" alt="ブロガーの女性" class="img_harf center-block">
+      </div>
+      
+    </section>
+    
+    <section class="trouble container-fluid max_width_960">
+      
+      <div class="row my_30">
+      
+        <div class="text-center popover top show center-block" style="position: relative; padding: 25px;">
+          <div class="arrow"></div>
+          <p>GitHubページでWebページを作ってたけど、独自ドメインを設定したくなった。どうやって設定すればいいの？ついでに独自ドメインのとり方も教えてほしいな。</p>
+        </div>
+        
+        <img src="../../../img/nayami_girl.png" class="img-responsive center-block img_harf" alt="悩める女子学生">
+        
+      </div>
+      
+      <p class="px_respon my_30">といった人に向けて記事を書いていきます。</p>
+      <p class="px_respon">※全て読むのに10分くらいかかります</p>
+      <p class="px_respon">※ドメイン取得から「CNAME」「Aレコード」設定方法まで全部説明しているため</p>
+      <p class="px_respon">※いいからドメインのとり方早く！という方は</p>
+      <p class="px_respon"><a href="#onamae" class="back_harf_green">⇛ここからどうぞ。</a></p>
+    </section>
+    
+    <section class="contents_table my_30 container-fluid  max_width_960 border py_20 px_30 width_harf">
+      <h2 class="text-center">記事が役立つ人</h2>
+      <ul class="py_20">
+        <li>Githubにドメインを適用したい人</li>
+        <li>Aレコードを上手く設定できない人</li>
+        <li>お名前.comで独自ドメイン取得したい人</li>
+      </ul>
+    </section>
+    
+    <section class="contents_table my_30 container-fluid  max_width_960 border py_20 px_30 width_harf">
+      <h2 class="text-center">記事内コンテンツ</h2>
+      <ul class="py_20">
+        <li><a href="#cnameorarecoard">CNAMEとAレコードの違い</a></li>
+        <li><a href="#osusumetld">オススメのTLD</a></li>
+        <li><a href="#onamae">お名前.comでドメイン取得</a></li>
+        <li><a href="#cname">CNAMEでの設定方法へ</a></li>
+        <li><a href="#arecord">Aレコードでの設定方法へ</a></li>
+      </ul>
+    </section>
+    
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4 hidden-xs mb_50">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- PC【記事内コンテンツ直下】 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:336px;height:280px"
+             data-ad-client="ca-pub-1856259713843580"
+             data-ad-slot="7145766891"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+    
+    <div class="disp_sp mb_50">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- スマホ【記事内コンテンツ直下】 -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-1856259713843580"
+           data-ad-slot="7288580585"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    
+    <section id="cnameorarecoard" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">CNAMEとAレコードの違い</h2>
+      <p class="px_respon pt_30 pb_30">具体的な説明の前に、CNAMEとAレコードの違いについて簡単にお話しますね。</p>
+      <p class="px_respon">いいからドメイン取得はやく！という方はこちらからどうぞ</p>
+      <p class="px_respon pb_30">⇛<a href="#onamae">独自ドメインのとり方</a></p>
+      <p class="px_respon">もうドメイン取ってるよ！という方はこちら</p>
+      <p class="px_respon">⇛<a href="#cname">CNAMEの設定方法</a></p>
+      <p class="px_respon pb_30">⇛<a href="#arecord">Aレコードの設定方法</a></p>
+      <p class="px_respon">【それぞれのレコードの特徴】</p>
+      <p class="px_respon pb_30 mb_50_sp">■Aレコード...独自ドメイン名でそのままアクセスできる。自分のGitHubPagesページのIPアドレスとドメインを結びつけるので、<span class="back_harf_green">IPアドレスを調べて入力しないとダメ。</span>何かの要因でGitHubPagesのIPアドレスが変更されたら都度更新する必要がある。</p>
+      <p class="px_respon pb_30">■CNAME…独自ドメインの頭にwwwなどをつけてアクセスする必要があるので<span class="back_harf_green">『.』が１つ増える。</span>IPアドレスは調べなくていい。（でもどうせなら独自ドメインに余計なwwwなんて付けたくないですよね！？）</p>
+    </section>
+    
+    <section id="osusumetld" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">オススメのTLD</h2>
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">赤枠の部分がTLD（トップ・レベル・ドメイン）です。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/tld.png" alt="グーグルサーチコンソール内でURL検索" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の最後の部分がTLD</figcaption>
+        </figure>
+      </div>
+      <p class="px_respon pb_30">オススメはメジャーで親しみやすい「.com」か「.net」です。「.info」は昔スパム業者が利用してた影響でオススメしないという声が多いです。「.info」で運営してたサイトが急に停止されたという噂もあります。なので、「.com」「.net」「.org」あたりが無難でしょう。</p>
+    </section>
+    
+    <section id="onamae" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">お名前.comでドメイン取得</h2>
+      <p class="px_respon pt_30 mb_50_sp">まずはお名前.comで独自ドメインを取得しないと始まりません。簡単なのでサクっと取得しましょう。</p>
+      <p class="px_respon pb_30 mb_50_sp">ここではクレジットカードでの購入方法を説明しています。</p>
+      <p class="px_respon">まずは公式サイトへアクセス</p>
+      <p class="px_respon mb_50_sp">⇛<a href="https://www.onamae.com/">【お名前.com】はここから</a></p>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">欲しいドメインの名前を入力して右の「検索ボタン」をクリック</p>
+        <p class="px_respon pb_30">※自分の好きな文字を入力して下さい。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/2.png" alt="お名前.comでドメイン名検索" class="img_70 center-block border">
+          <figcaption class="text-center">取りたいドメイン名で検索しましょう</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">好きなTLD（.comなど）を選択して右側の「料金確認へ進む」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/4.png" alt="好きなTLDを選択" class="img_70 center-block border">
+          <figcaption class="text-center">取りたいTLDを選択しましょう</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <figure>
+          <p class="px_respon mb_50_sp">何年登録するかを選択して、右側の「初めてご利用の方」欄を入力、「次へ」をクリック</p>
+          <p class="px_respon mb_50_sp">※必ずメールを受信できるアドレスを入力して下さい。</p>
+          <p class="px_respon pb_30">※他の項目は後から設定できるので今は気にしなくて大丈夫です。</p>
+          <img src="../../../img/blogs/onamae_dot_com/5.png" alt="はじめての方はアドレスとパスを入力" class="img_70 center-block border">
+          <figcaption class="text-center">メールアドレスとパスを入力</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <figure>
+          <p class="px_respon pb_30 mb_50_sp">個人情報を入力して<br class="br_sp">「次へ進む」をクリック</p>
+          <p class="px_respon mb_50_sp">※この情報が直に公開されることはありません。</p>
+          <p class="px_respon pb_30">※Whois情報公開代行</p>
+          <img src="../../../img/blogs/onamae_dot_com/6.png" alt="個人情報を入力" class="img_70 center-block border">
+          <figcaption class="text-center">個人情報を入力して次へ進む</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">クレジットカードの情報を入力して「申込む」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/8.png" alt="クレジットカード情報を入力" class="img_70 center-block border">
+          <figcaption class="text-center">カード情報を入力して次へ進む</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">この画面で20秒くらい待機します。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/8.png" alt="更新待機中画面" class="img_70 center-block border">
+          <figcaption class="text-center">更新に少し時間がかかるかもしれません</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">受付が完了するので、以下の３点を確認して「↓」をクリック</p>
+        <p class="px_respon">【確認内容】</p>
+        <ul class="px_respon">
+          <li class="ml_30">登録期間</li>
+          <li class="ml_30">Whois情報公開代行</li>
+          <li class="ml_30 pb_30">ドメイン自動更新設定済み</li>
+        </ul>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/10.png" alt="ドメイン情報認証について" class="img_70 center-block border">
+          <figcaption class="text-center">この内容でメールが届きます</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">！重要！設定したアドレスに以下の内容で本人確認のメールが届きます。</p>
+        <p class="px_respon">※添付URLを必ずクリック。</p>
+        <p class="px_respon">※放置でドメインが無効。</p>
+        <p class="px_respon pb_30">※実際の画面は次にあります。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/11.png" alt="ドメイン情報認証についてメールがくる" class="img_70 center-block border">
+          <figcaption class="text-center">この内容でメールが届くので、添付URLを必ずクリック</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">！重要！こんな内容のメールが届くのでURLをクリック。</p>
+        <p class="px_respon">※添付URLを必ずクリック。</p>
+        <p class="px_respon">※放置でドメインが無効。</p>
+        <p class="px_respon pb_30">※レジストラとはドメインを登録する事業者のこと。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/12.png" alt="URLをクリックして本人確認" class="img_70 center-block border">
+          <figcaption class="text-center">リンクにアクセスしてメールの有効性を確認</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">この画面が出ればOK</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/13.png" alt="アドレス認証正常確認" class="img_70 center-block border">
+          <figcaption class="text-center">メール認証完了の画面</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">続いてお名前.comにログインして順番に確認していきます。</p>
+        <p class="px_respon mb_50_sp">まずは「登録期限日」「Whois情報公開代行」の確認方法からです。</p>
+        <p class="px_respon pb_30">右上のお名前IDをコピーして「こちらへ」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/14.png" alt="ドメインの設定確認" class="img_70 center-block border">
+          <figcaption class="text-center">ドメインの情報を確認します。</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">お名前IDとパスワードを入力してログインをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/15.png" alt="お名前.comにログイン" class="img_70 center-block border">
+          <figcaption class="text-center">お名前.comにログインします</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">ドメインの最低更新可能年数を確認しておきましょう。</p>
+        <p class="px_respon pb_30">画面下のドメイン名にチェックを入れ、右の更新年数の矢印マークをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/15_1.png" alt="ドメインの更新年数をチェック" class="img_70 center-block border">
+          <figcaption class="text-center">ドメインの更新年数をチェック</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">表示された1番上の年数が「最低更新可能年数」です。</p>
+        <p class="px_respon mb_50_sp">手動で更新する際はここからできます。</p>
+        <p class="px_respon pb_30">「1年」と確認できますね。</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/onamae_dot_com/15_2.png" alt="一番上が最低更新年数" class="img_70 center-block border">
+          <figcaption class="text-center">一番上が最低更新年数</figcaption>
+        </figure>
+        <figure class="disp_sp">
+          <img src="../../../img/blogs/onamae_dot_com/15_2_sp.png" alt="一番上が最低更新年数" class="img_70 center-block border">
+          <figcaption class="text-center">一番上が最低更新年数</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">実際に更新する必要はないので、そのまま左上の「ドメイン」タブをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/16.png" alt="ドメイン設定変更画面へ" class="img_70 center-block border">
+          <figcaption class="text-center">ドメインの設定を変更します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">今回はドメインを取得したばかりなので、この案内は関係ありません。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/17.png" alt="更新手続きお忘れ" class="img_70 center-block border">
+          <figcaption class="text-center">今回は更新しないので移動します。</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">取得したドメイン名をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/18.png" alt="ドメイン名クリック" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の詳細を確認します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">「ドメイン詳細」「オプション情報」の欄を順に確認します。</p>
+        <p class="px_respon pb_30">まずはドメイン詳細から見ていきましょう。</p>
+        <p class="px_respon">■確認する場所</p>
+        <ul class="px_respon">
+          <li class="ml_30 mb_10_sp">【登録期限日】・・・この日をすぎるとドメインが自分の物ではなくなる</li>
+          <li class="ml_30 pb_30">【自動更新】・・・・「設定済み」なら登録期限日が来ても自動で更新してくれる</li>
+        </ul>
+        <figure class="disp_sp mb_50_sp">
+          <img src="../../../img/blogs/onamae_dot_com/19_1_sp.png" alt="ドメイン名クリック" class="img_70 center-block border">
+        </figure>
+        <p class="px_respon mb_50_sp">自動更新の更新年数は、そのドメインの最低更新可能年数です。</p>
+        <p class="px_respon pb_30">※ほとんどのドメインは1年。</p>
+        <p class="px_respon mb_50_sp">オススメはしませんが、自動更新は解除できます。</p>
+        <p class="px_respon mb_50_sp">念の為、操作方法を見ておきましょう。</p>
+        <p class="px_respon pb_30">右の「自動更新」ボタンをクリックしてください。</p>
+        <p class="px_respon">※自動更新を切るデメリットはこちら</p>
+        <p class="px_respon pb_30"><a href="https://www.onamae.com/service/d-renew/">⇛【自動更新解除のデメリット】</a></p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/onamae_dot_com/19.png" alt="ドメイン名クリック" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の詳細を確認します</figcaption>
+        </figure>
+        <figure class="disp_sp">
+          <img src="../../../img/blogs/onamae_dot_com/19_2_sp.png" alt="ドメイン名クリック" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の詳細を確認します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">ドメイン名にチェックを入れて「確認画面へ進む」をクリック。</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/20.png" alt="ドメイン自動更新設定" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の自動更新設定を確認</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">右の申込み内容「解除する」を確認して</p>
+        <p class="px_respon mb_50_sp">⇛「規約に同意し、上記内容を申込む」ボタンをクリック。</p>
+        <p class="px_respon pb_30">これで自動更新を解除出来ます。</p>
+        <p class="px_respon pb_30">※解除しない場合は押さないで下さい</p>
+        <figure>
+          <img src="../../../img/blogs/onamae_dot_com/21.png" alt="ドメイン自動更新設定の申し込み" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の自動更新設定変更を申込む</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">続いて「オプション情報」の確認です。</p>
+        <p class="px_respon pb_30">２つ前の画面に戻って下にスクロールすると「オプション情報」の欄があります。</p>
+        <p class="px_respon">【確認項目】</p>
+        <ul class="px_respon pb_30">
+          <li class="ml_30">Whois情報公開代行・・・サービス利用中</li>
+        </ul>
+        <figure class="disp_sp mb_50_sp">
+          <img src="../../../img/blogs/onamae_dot_com/22_sp.png" alt="ドメイン自動更新設定" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の自動更新設定を確認</figcaption>
+        </figure>
+        <p class="px_respon pb_30">このサービスを利用しないと、あなたの住所、氏名、電話番号などがネットに公開されるので十分注意してください。なお、サービス利用料金はドメイン設定時と同時に申し込めば無料です。</p>
+        <p class="px_respon pb_30">※申込時に自動でサービス追加されるので安心して下さい。2018年9月21日現在</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/onamae_dot_com/22.png" alt="ドメイン自動更新設定" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名の自動更新設定を確認</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">次はいよいよDNSの設定です。</p>
+        <p class="px_respon pb_30">この作業が終わるとGitHubへ独自ドメインを設定できます。</p>
+        <p class="px_respon pb_30">ページ上部の「TOP」タブをクリックします。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/0.png" alt="お名前.comのTOP画面へ" class="img_70 center-block border">
+          <figcaption class="text-center">TOP画面へ移動します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">よく利用されるお手続きの「DNSレコードを設定する」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/0_1.png" alt="DNSレコードへ" class="img_70 center-block border">
+          <figcaption class="text-center">DNSレコードの設定をします</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">「内部ドメインの」ドメイン名にチェックを付けて「次へ進む」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/1.png" alt="ドメイン名にチェック" class="img_70 center-block border">
+          <figcaption class="text-center">ドメイン名にチェックを付けて次に進む</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">下の方にある「DNSレコード設定を利用する」の設定するボタンをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/2.png" alt="DNSレコード設定を利用する" class="img_70 center-block border">
+          <figcaption class="text-center">DNSレコード設定を利用する</figcaption>
+        </figure>
+      </div>
+      
+      <p class="px_respon pb_30">ここまでが共通の作業です。次項からCNAME、Aレコードそれぞれの方法を見ていきます。</p>
+    </section>
+    
+    <section id="cname" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">CNAMEでの設定方法</h2>
+      <p class="px_respon pt_30 mb_50_sp">CNAMEでの設定方法を見ていきましょう。</p>
+      <p class="px_respon">Aレコードで設定したい！という方はこちらからどうぞ</p>
+      <p class="px_respon">⇛<a href="arecord">【Aレコードの設定方法】</a></p>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">少し下にスクロールすると入力画面があるので例を参考に入力して下さい。</p>
+        <p class="px_respon pb_30">■入力例</p>
+        <ul class="px_respon">
+          <li class="ml_30 mb_10_sp">【ホスト名】・・・www（空白NG）</li>
+          <li class="ml_30 mb_10_sp">【TYPE】・・・・CNAME</li>
+          <li class="ml_30 mb_10_sp">【TTL】・・・・・そのまま</li>
+          <li class="ml_30 pb_30">【VALUE】・・・GitHubで作ったWebサイトのURL　※頭のhttps://と末尾の/は入れない</li>
+        </ul>
+        <p class="px_respon pb_30">最後に「追加ボタン」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/3.png" alt="CNAMEの情報入力" class="img_70 center-block border">
+          <figcaption class="text-center">CNAMEの情報入力</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">下にスクロールして「DNSレコード設定用ネームサーバ変更確認」にチェック</p>
+        <p class="px_respon pb_30">※転送Plusというサービスを利用するため</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/4.png" alt="ネームサーバ変更" class="img_70 center-block border">
+          <figcaption class="text-center">初回はチェックしましょう</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">「設定する」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/5.png" alt="変更の確定" class="img_70 center-block border">
+          <figcaption class="text-center">変更を確定します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">30秒ほど待ちます</p>
+        <p class="px_respon pb_30">※後でまた戻ってくるので、この画面は閉じないで下さい。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/6.png" alt="更新確定待機中" class="img_70 center-block border">
+          <figcaption class="text-center">少しだけ時間がかかります</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">登録したメールアドレスに変更通知が来るのを待ちます。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/7.png" alt="変更完了メール" class="img_70 center-block border">
+          <figcaption class="text-center">このメール通知を待ってから次に進みましょう</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">次はGitHubへアクセスします。</p>
+        <p class="px_respon pb_30">独自ドメインを設定したいレポジトリを選択。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/8.png" alt="GitHubへアクセス" class="img_70 center-block border">
+          <figcaption class="text-center">独自ドメインにしたいレポジトリを選択</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">上部の「Settings」タブをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/9.png" alt="GitHubへアクセス" class="img_70 center-block border">
+          <figcaption class="text-center">独自ドメインにしたいレポジトリを選択</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">下にスクロールして「Custom domain」欄を見つけて下さい。</p>
+        <ol class="px_respon">
+          <li class="ml_30 mb_10_sp">CNAMEの時に設定した独自ドメインを入力</li>
+          <li class="ml_30 mb_10_sp">Saveクリック</li>
+          <li class="ml_30 pb_30">Enforce HTTPSチェック　※これがHTTPS化するボタン。</li>
+        </ol>
+        <p class="px_respon pb_30">※CNAMEの場合、頭の「www」をはずせない。</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/dns_settei_git_hub/10.png" alt="カスタムドメイン設定" class="img_70 center-block border">
+          <figcaption class="text-center">独自ドメインを設定してHTTPS化</figcaption>
+        </figure>
+        <figure class="disp_sp">
+          <img src="../../../img/blogs/dns_settei_git_hub/10_sp.png" alt="カスタムドメイン設定" class="img_70 center-block border">
+          <figcaption class="text-center">独自ドメインを設定してHTTPS化</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">次は、転送Plusの設定です。お名前.comにアクセスします。</p>
+        <p class="px_respon pb_30">上部の「オプション設定」タブをクリック。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/12.png" alt="オプション設定" class="img_70 center-block border">
+          <figcaption class="text-center">オプション設定にアクセス</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">転送Plusの「URL転送設定」を選択</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/13.png" alt="転送転送設定" class="img_70 center-block border">
+          <figcaption class="text-center">URL転送設定にアクセス</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">ドメイン名の右側「設定する」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/14.png" alt="詳細を設定" class="img_70 center-block border">
+          <figcaption class="text-center">設定をクリック</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">少し下の入力欄に記入します。</p>
+        <p class="px_respon pb_30">■入力例</p>
+        <ul class="px_respon pb_30">
+          <li class="ml_30 mb_10_sp">【転送元URL】・・・空</li>
+          <li class="ml_30 mb_10_sp">【転送先URL】・・・「www」＋CNAMEで設定したドメイン名</li>
+          <li class="ml_30 mb_10_sp">【転送タイプ】・・・リダイレクト</li>
+        </ul>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/15.png" alt="転送先情報入力" class="img_70 center-block border">
+          <figcaption class="text-center">転送先情報入力</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">下にスクロールして「確認画面へ進む」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/16.png" alt="確認画面へ進む" class="img_70 center-block border">
+          <figcaption class="text-center">もうすぐ終わります。</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">設定情報の「設定する」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/17.png" alt="設定する" class="img_70 center-block border">
+          <figcaption class="text-center">変更を確定させます</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">30秒ほど待ちます。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/18.png" alt="設定変更中" class="img_70 center-block border">
+          <figcaption class="text-center">少し時間がかかります</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">メール通知が来るのを確認して作業終了です。</p>
+        <p class="px_respon mb_50_sp">「www.ドメイン名」でGitHubの自作Webページにアクセス出来るのを確認して下さい。</p>
+        <p class="px_respon pb_30">以上でCNAMEでの設定は完了です。お疲れ様でした。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/19.png" alt="設定変更完了通知" class="img_70 center-block border">
+          <figcaption class="text-center">CNAMEの設定が完了しました。</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <section id="arecord" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">Aレコードでの設定方法へ</h2>
+      <p class="px_respon pt_30">最後はAレコードでの設定方法です。ドメインに余計なものがつかないのでオススメです。</p>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">まずはIPアドレスを調べます。</p>
+        <p class="px_respon mb_50_sp">ターミナルにアクセスし、コマンド</p>
+        <p class="px_respon mb_50_sp">「dig YOUR-USERNAME.github.io +noall +answer」を入力してEnter</p>
+        <p class="px_respon pb_30 mb_50_sp">※YOUR_USERNAMEには自分のGithubの名前を入力して下さい。</p>
+        <p class="px_respon">ターミナルは分かりますよね？</p>
+        <p class="px_respon">分からない人はこちらへ</p>
+        <p class="px_respon pb_30">⇛<a href="https://techacademy.jp/magazine/5155" target="_blank">【ターミナルの使い方】</a>※外部ページ</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/dns_settei_git_hub/20.png" alt="IPアドレスを調べる" class="img_70 center-block border">
+          <figcaption class="text-center">ターミナルでIPアドレスを調べる</figcaption>
+        </figure>
+        <figure class="disp_sp">
+          <img src="../../../img/blogs/dns_settei_git_hub/20_sp.png" alt="IPアドレスを調べる" class="img_70 center-block border">
+          <figcaption class="text-center">ターミナルでIPアドレスを調べる</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">するとAレコードの情報が出てくるので、この状態でおいておきます。</p>
+        <p class="px_respon">次はお名前.comへ移動します。</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/dns_settei_git_hub/21.png" alt="Aレコードの情報" class="img_70 center-block border">
+          <figcaption class="text-center">Aレコードの情報をゲット</figcaption>
+        </figure>
+        <figure class="disp_sp">
+          <img src="../../../img/blogs/dns_settei_git_hub/21_sp.png" alt="Aレコードの情報" class="img_70 center-block border">
+          <figcaption class="text-center">Aレコードの情報をゲット</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">お名前.comにアクセスしたら、</p>
+        <p class="px_respon pb_30">「TOP」タブから「DNSレコードを設定する」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/21_1.png" alt="DNSレコード設定へ" class="img_70 center-block border">
+          <figcaption class="text-center">DNSにAレコードの入力をしにいきます</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">「内部ドメイン一覧」ドメイン名を選択して「次へ進む」</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/1.png" alt="ドメイン名をチェック" class="img_70 center-block border">
+          <figcaption class="text-center">変更するドメイン名を選択します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">DNSレコード設定を利用する右の「設定する」ボタンをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/2.png" alt="DNSレコード設定" class="img_70 center-block border">
+          <figcaption class="text-center">DNSレコード設定を設定します</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">さきほど取得した「Aレコード」の情報を入力します。</p>
+        <ul class="px_respon pb_30">
+          <li class="ml_30 mb_10_sp">【TYPE】・・・A</li>
+          <li class="ml_30 mb_10_sp">【TTL】・・・3600</li>
+          <li class="ml_30 mb_10_sp">【VALUE】・・・取得したもの</li>
+          <li class="ml_30 mb_10_sp">【状態】・・・有効</li>
+        </ul>
+        <p class="px_respon pb_30">入力が終わったら「追加」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/22.png" alt="Aレコード情報を入力" class="img_70 center-block border">
+          <figcaption class="text-center">Aレコード情報を入力</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon">取得Aレコードの情報は４つだったので、全部追加します。</p>
+        <p class="px_respon pb_30">※違うのはVALUEの部分だけです。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/23.png" alt="Aレコード情報を追加" class="img_70 center-block border">
+          <figcaption class="text-center">4つとも追加します。</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">下にスクロールして左側のボタンをチェック、「確認画面へ進む」をクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/24.png" alt="ネームサーバ変更確認" class="img_70 center-block border">
+          <figcaption class="text-center">初回はチェックが必要です</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">ネームサーバの更新通知メールを待ちます。</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/19.png" alt="変更完了通知" class="img_70 center-block border">
+          <figcaption class="text-center">変更完了の通知メールが来るのを待ちましょう</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">次はGitHubにアクセスします。</p>
+        <p class="px_respon pb_30">独自ドメインを設定したいレポジトリをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/8.png" alt="レポジトリにアクセス" class="img_70 center-block border">
+          <figcaption class="text-center">独自ドメインを設定したいレポジトリにアクセス</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">上部の「Settings」タブをクリック</p>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/9.png" alt="Settingsへ" class="img_70 center-block border">
+          <figcaption class="text-center">カスタムドメイン画面にいきます</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon pb_30">下にスクロールして「Custom domain」欄を見つけて下さい。</p>
+        <ol class="px_respon">
+          <li class="ml_30 mb_10_sp">CNAMEの時に設定した独自ドメインを入力</li>
+          <li class="ml_30 mb_10_sp">Saveクリック</li>
+          <li class="ml_30 pb_30">Enforce HTTPSチェック　※これがHTTPS化するボタン。</li>
+        </ol>
+        <figure>
+          <img src="../../../img/blogs/dns_settei_git_hub/26.png" alt="カスタムドメイン設定" class="img_70 center-block border">
+          <figcaption class="text-center">独自ドメインを設定してHTTPS化</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">こんな表示が出てEnforceHTTPSにチェック出来ないことがあります。</p>
+        <figure class="disp_sp mb_50_sp">
+          <img src="../../../img/blogs/dns_settei_git_hub/28_sp.png" alt="EnforceHTTPSチェック" class="img_70 center-block border">
+          <figcaption class="text-center">チェック出来るまで結構な時間がかかるかも</figcaption>
+        </figure>
+        <p class="px_respon mb_50_sp">見てみると、<br class="br_sp">「24時間以内にはコンプリートするから待っててね」</p>
+        <p class="px_respon mb_50_sp">という感じの英語が。なので、しばらく待ちましょう。</p>
+        <p class="px_respon pb_30">定期的に監視して、変化があったらすぐチェックしましょう。</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/dns_settei_git_hub/28.png" alt="EnforceHTTPSチェック" class="img_70 center-block border">
+          <figcaption class="text-center">チェック出来るまで結構な時間がかかるかも</figcaption>
+        </figure>
+      </div>
+      
+      <div class="mt_30 p_30 mb_30 boarder_radius background_gray2">
+        <p class="px_respon mb_50_sp">最終的に、こんな感じで表示されればOKです。※Enforce HTTPSより少し上にあります。</p>
+        <figure class="disp_sp mb_50_sp">
+          <img src="../../../img/blogs/dns_settei_git_hub/29_sp.png" alt="Settingsへ" class="img_70 center-block border">
+          <figcaption class="text-center">これでドメインにアクセス出来る！</figcaption>
+        </figure>
+        <p class="px_respon mb_50_sp">「独自ドメイン」のみでgithub.ioの自分のWebサイトにアクセスできる事を確認して下さい。</p>
+        <p class="px_respon mb_50_sp">※全体的に更新の遅いときがあるみたいです。</p>
+        <p class="px_respon pb_30">※僕はEnforce HTTPSに2時間、独自ドメインでアクセスできるまでに1時間待たされました。</p>
+        <figure class="disp_pc">
+          <img src="../../../img/blogs/dns_settei_git_hub/29.png" alt="Settingsへ" class="img_70 center-block border">
+          <figcaption class="text-center">これでドメインにアクセス出来る！</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <section id="summary" class="container-fluid max_width_960 mb_30">
+      <h2 class="h2_heading">まとめ</h2>
+      <p class="px_respon pt_30 pb_30 mb_50_sp">とても疲れました。注意点として、「CNAME」で設定をするとレポジトリに勝手に「CNAME」ファイルが作成されます。するとローカルのレポジトリクローンとの不整合が発生してpushできなくなるかもしれません。</p>
+      <p class="px_respon">その場合は、とりあえず「git pull」コマンドをターミナルから投入しましょう。push出来るようになるかもしれません。</p>
+      <p class="px_respon pb_30"><a href="https://techacademy.jp/magazine/6235">⇛githubの基本的な使い方はこちら</a>※外部ページ</p>
+      <p class="px_respon">【おまけ１】</p>
+      <p class="px_respon">このブログでは、Bracketsを使ったHTMLの基礎をご紹介しています。githubでWebサイトを作る際に参考になると思うので、ぜひ参考にして下さい。</p>
+      <p class="px_respon pb_30"><a href="../brackets.html">⇛BracketsでHTMLを書こう！【環境構築編】</a></p>
+      <p class="px_respon">【おまけ２】</p>
+      <p class="px_respon">フリーランスでの案件取得するコツもご紹介しています。HTMLでLPを作成してサクッと稼いでみませんか？</p>
+      <p class="px_respon"><a href="../freelance/first_freelance.html">⇛初心者フリーランスが案件を獲得する具体的な5つのコツ</a></p>
+    </section>
+    
+    
+  </main>
+  
+  <div class="row container-fluid max_width_960 center-block hidden-xs disp_pc mb_50">
+    <div class="col-sm-4 col-sm-offset-1 hidden-sm">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- PC【まとめ終直下左】 -->
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:336px;height:280px"
+               data-ad-client="ca-pub-1856259713843580"
+               data-ad-slot="9413773365"></ins>
+        <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <div class="col-sm-4 col-sm-offset-1 hidden-sm">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- PC【まとめ終直下右】 -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:336px;height:280px"
+           data-ad-client="ca-pub-1856259713843580"
+           data-ad-slot="7294876483"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+  
+  <div class="disp_sp mb_50">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- スマホ【まとめ終直下】 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1856259713843580"
+         data-ad-slot="3586182878"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  
+  <nav class="background_gray py_30 container-fluid padding_none max_width_960">
+    <ul class="py_20 text-center">
+      <li class="px_10 inline_block"><a href="../../../index.html">トップページへ</a></li>
+    </ul>
+  </nav>
+  <footer class="text-center bg-primary center-block">
+    <small>Copyright Kanda Takeshi</small>
+  </footer>
+</div>
+</body>
+</html>
