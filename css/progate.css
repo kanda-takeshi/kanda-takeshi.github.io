@@ -22,10 +22,12 @@
 }
 
 .back_harf_yellow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
   background: linear-gradient(transparent 50%, yellow 50%);
 }
 
 .back_harf_green {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #D4FC82));
   background: linear-gradient(transparent 50%, #D4FC82 50%);
 }
 
@@ -249,6 +251,10 @@ footer {
   letter-spacing: 0px;
 }
 
+h2 {
+  margin-bottom: 50px;
+}
+
 @media screen and (max-width: 400px) {
   .br_pc {
     display: none;
@@ -267,18 +273,32 @@ footer {
   }
 
   p {
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 200%;
+    margin-bottom: 80px;
+  }
+
+  .uni {
+    margin-bottom: 80px;
+  }
+  .uni p {
+    margin-bottom: 5px;
+  }
+
+  .g_uni {
+    padding: 30px;
+    background-color: #F3F4F4;
+    border-radius: 10px;
+  }
+  .g_uni figure {
+    margin-bottom: 50px;
   }
 
   li {
     font-size: 16px;
-  }
-
-  .px_respon {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   h1, h2, p, li {
@@ -312,14 +332,6 @@ footer {
     margin-bottom: 10px;
   }
 
-  .mb_50_sp {
-    margin-bottom: 50px;
-  }
-
-  .mb_80_sp {
-    margin-bottom: 80px;
-  }
-
   .my_20_sp {
     margin-left: 20px;
     margin-right: 20px;
@@ -342,9 +354,29 @@ footer {
     display: none;
   }
 
-  .px_respon {
+  p {
     padding-left: 30px;
     padding-right: 200px;
+  }
+
+  .uni {
+    margin-bottom: 50px;
+  }
+  .uni p {
+    margin-bottom: 5px;
+  }
+
+  .pc_mb {
+    margin-bottom: 50px;
+  }
+
+  .g_uni {
+    padding: 30px;
+    background-color: #F3F4F4;
+    border-radius: 10px;
+  }
+  .g_uni figure {
+    margin-bottom: 50px;
   }
 }
 /*-------  ここから共通のCSS  --------*/
@@ -591,7 +623,8 @@ header .navi li a:hover {
   width: 300px;
   display: inline-block;
   margin-bottom: 100px;
-  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .mainContentTherd .menus .menuWrapper .menu {
@@ -802,7 +835,8 @@ header .navi li a:hover {
 }
 
 .imageWrapper {
-  box-shadow: 1px 1px #000000;
+  -webkit-box-shadow: 1px 1px #000000;
+          box-shadow: 1px 1px #000000;
 }
 
 .columnWrapper .loadButton {
